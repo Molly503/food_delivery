@@ -1,0 +1,5 @@
+city_type,avg_delivery_time,order_count,min_delivery_time,max_delivery_time,std_delivery_time
+NaN,22.10,1104,10,54,8.37
+Urban,23.09,9506,10,54,8.89
+Metropolitian,27.37,31990,10,54,9.16
+Semi-Urban,49.71,152,44,54,2.72

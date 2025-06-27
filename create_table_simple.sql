@@ -1,0 +1,23 @@
+CREATE TABLE delivery_data (
+    order_id VARCHAR(50),
+    rider_id VARCHAR(50),
+    rider_age INT,
+    rider_rating DECIMAL(3,2),
+    restaurant_lat DECIMAL(10,6),
+    restaurant_lng DECIMAL(10,6),
+    delivery_lat DECIMAL(10,6),
+    delivery_lng DECIMAL(10,6),
+    order_date DATE,
+    order_time VARCHAR(20),
+    pickup_time VARCHAR(20),
+    weather VARCHAR(20),
+    traffic_density VARCHAR(20),
+    vehicle_condition INT,
+    order_type VARCHAR(20),
+    vehicle_type VARCHAR(30),
+    multi_delivery INT,
+    city_type VARCHAR(20),
+    delivery_time INT,
+    is_festival TINYINT,
+    order_hour INT
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;

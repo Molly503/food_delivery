@@ -1,0 +1,26 @@
+Field,Description
+order_id,Unique order identifier
+rider_id,Delivery person identifier
+rider_age,Delivery person age
+rider_rating,Delivery person rating (1-5)
+restaurant_lat,Restaurant latitude
+restaurant_lng,Restaurant longitude
+delivery_lat,Delivery location latitude
+delivery_lng,Delivery location longitude
+order_date,Order date (YYYY-MM-DD)
+order_time,Order time (HH:MM:SS)
+pickup_time,Pickup time (HH:MM:SS)
+weather,Weather condition (Sunny/Stormy/Cloudy/Foggy/Sandstorm/Windy)
+traffic_density,Traffic density (Low/Medium/High/Heavy)
+vehicle_condition,Vehicle condition score
+order_type,Type of order (Meal/Snack/Drinks/Buffet)
+vehicle_type,Vehicle type (Motorcycle/Scooter/Electric_Scooter/Bicycle)
+multi_delivery,Multiple deliveries flag (0/1)
+city_type,City type (Urban/Metropolitan/Semi-Urban)
+delivery_time,Delivery duration in minutes
+is_festival,Festival period flag (0/1)
+order_hour,Hour of order (0-23)
+pickup_hour,Hour of pickup (0-23)
+distance_km,Delivery distance in kilometers
+efficiency_min_per_km,Delivery efficiency (minutes per km)
+time_period,Time period (Morning/Lunch/Afternoon/Dinner/Late_Night)
