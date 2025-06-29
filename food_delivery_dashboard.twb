@@ -1,0 +1,2676 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1112.0850                               -->
+<workbook original-version='18.1' source-build='2024.3.1 (20243.24.1112.0850)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='operations_summary_for_tableau+ (food_delivery)' inline='true' name='federated.17oquoq0d9mupt1844s1818be3pb' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='127.0.0.1' name='mysql.139dkf00wdzz1518eee4c1k4ceg7'>
+            <connection class='mysql' dbname='food_delivery' odbc-native-protocol='' one-time-sql='' port='3306' server='127.0.0.1' source-charset='' username='root' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='operations_summary_for_tableau' table='[operations_summary_for_tableau]' type='table'>
+            <columns>
+              <column datatype='date' date-parse-format='yyyy-MM-dd' name='order_date' />
+            </columns>
+          </relation>
+          <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='anomaly_monitoring' table='[anomaly_monitoring]' type='table' />
+          <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='city_performance_analysis' table='[city_performance_analysis]' type='table' />
+          <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='daily_operations_kpi' table='[daily_operations_kpi]' type='table' />
+          <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='external_factors_analysis' table='[external_factors_analysis]' type='table' />
+          <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='hourly_operations_analysis' table='[hourly_operations_analysis]' type='table' />
+          <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='rider_performance_analysis' table='[rider_performance_analysis]' type='table' />
+        </relation>
+        <cols>
+          <map key='[active_riders (hourly_operations_analysis)]' value='[hourly_operations_analysis].[active_riders]' />
+          <map key='[active_riders]' value='[daily_operations_kpi].[active_riders]' />
+          <map key='[avg_delivery_time (city_performance_analysis)]' value='[city_performance_analysis].[avg_delivery_time]' />
+          <map key='[avg_delivery_time (daily_operations_kpi)]' value='[daily_operations_kpi].[avg_delivery_time]' />
+          <map key='[avg_delivery_time (external_factors_analysis)]' value='[external_factors_analysis].[avg_delivery_time]' />
+          <map key='[avg_delivery_time (hourly_operations_analysis)]' value='[hourly_operations_analysis].[avg_delivery_time]' />
+          <map key='[avg_delivery_time (rider_performance_analysis)]' value='[rider_performance_analysis].[avg_delivery_time]' />
+          <map key='[avg_delivery_time]' value='[operations_summary_for_tableau].[avg_delivery_time]' />
+          <map key='[avg_multi_delivery (rider_performance_analysis)]' value='[rider_performance_analysis].[avg_multi_delivery]' />
+          <map key='[avg_multi_delivery]' value='[operations_summary_for_tableau].[avg_multi_delivery]' />
+          <map key='[avg_rating (city_performance_analysis)]' value='[city_performance_analysis].[avg_rating]' />
+          <map key='[avg_rating (external_factors_analysis)]' value='[external_factors_analysis].[avg_rating]' />
+          <map key='[avg_rating (hourly_operations_analysis)]' value='[hourly_operations_analysis].[avg_rating]' />
+          <map key='[avg_rating (rider_performance_analysis)]' value='[rider_performance_analysis].[avg_rating]' />
+          <map key='[avg_rating]' value='[operations_summary_for_tableau].[avg_rating]' />
+          <map key='[avg_rider_rating]' value='[daily_operations_kpi].[avg_rider_rating]' />
+          <map key='[city_type (city_performance_analysis)]' value='[city_performance_analysis].[city_type]' />
+          <map key='[city_type]' value='[operations_summary_for_tableau].[city_type]' />
+          <map key='[delay_rate]' value='[daily_operations_kpi].[delay_rate]' />
+          <map key='[delayed_orders]' value='[daily_operations_kpi].[delayed_orders]' />
+          <map key='[delivery_time_vs_daily_avg]' value='[hourly_operations_analysis].[delivery_time_vs_daily_avg]' />
+          <map key='[drinks_rate]' value='[city_performance_analysis].[drinks_rate]' />
+          <map key='[high_rating_orders]' value='[daily_operations_kpi].[high_rating_orders]' />
+          <map key='[high_rating_rate]' value='[daily_operations_kpi].[high_rating_rate]' />
+          <map key='[is_festival]' value='[operations_summary_for_tableau].[is_festival]' />
+          <map key='[is_festival_day]' value='[daily_operations_kpi].[is_festival_day]' />
+          <map key='[low_rating_orders]' value='[anomaly_monitoring].[low_rating_orders]' />
+          <map key='[low_rating_rate]' value='[anomaly_monitoring].[low_rating_rate]' />
+          <map key='[meal_rate]' value='[city_performance_analysis].[meal_rate]' />
+          <map key='[moderate_delays]' value='[anomaly_monitoring].[moderate_delays]' />
+          <map key='[motorcycle_usage_rate]' value='[external_factors_analysis].[motorcycle_usage_rate]' />
+          <map key='[multi_delivery_rate]' value='[city_performance_analysis].[multi_delivery_rate]' />
+          <map key='[on_time_orders (rider_performance_analysis)]' value='[rider_performance_analysis].[on_time_orders]' />
+          <map key='[on_time_orders]' value='[daily_operations_kpi].[on_time_orders]' />
+          <map key='[on_time_rate (city_performance_analysis)]' value='[city_performance_analysis].[on_time_rate]' />
+          <map key='[on_time_rate (daily_operations_kpi)]' value='[daily_operations_kpi].[on_time_rate]' />
+          <map key='[on_time_rate (external_factors_analysis)]' value='[external_factors_analysis].[on_time_rate]' />
+          <map key='[on_time_rate (hourly_operations_analysis)]' value='[hourly_operations_analysis].[on_time_rate]' />
+          <map key='[on_time_rate (rider_performance_analysis)]' value='[rider_performance_analysis].[on_time_rate]' />
+          <map key='[on_time_rate]' value='[operations_summary_for_tableau].[on_time_rate]' />
+          <map key='[order_date (anomaly_monitoring)]' value='[anomaly_monitoring].[order_date]' />
+          <map key='[order_date (city_performance_analysis)]' value='[city_performance_analysis].[order_date]' />
+          <map key='[order_date (daily_operations_kpi)]' value='[daily_operations_kpi].[order_date]' />
+          <map key='[order_date (external_factors_analysis)]' value='[external_factors_analysis].[order_date]' />
+          <map key='[order_date (hourly_operations_analysis)]' value='[hourly_operations_analysis].[order_date]' />
+          <map key='[order_date (rider_performance_analysis)]' value='[rider_performance_analysis].[order_date]' />
+          <map key='[order_date]' value='[operations_summary_for_tableau].[order_date]' />
+          <map key='[order_hour]' value='[hourly_operations_analysis].[order_hour]' />
+          <map key='[order_type]' value='[operations_summary_for_tableau].[order_type]' />
+          <map key='[order_volume]' value='[operations_summary_for_tableau].[order_volume]' />
+          <map key='[orders (external_factors_analysis)]' value='[external_factors_analysis].[orders]' />
+          <map key='[orders (hourly_operations_analysis)]' value='[hourly_operations_analysis].[orders]' />
+          <map key='[orders]' value='[city_performance_analysis].[orders]' />
+          <map key='[orders_per_rider (city_performance_analysis)]' value='[city_performance_analysis].[orders_per_rider]' />
+          <map key='[orders_per_rider (daily_operations_kpi)]' value='[daily_operations_kpi].[orders_per_rider]' />
+          <map key='[orders_per_rider]' value='[operations_summary_for_tableau].[orders_per_rider]' />
+          <map key='[performance_score]' value='[rider_performance_analysis].[performance_score]' />
+          <map key='[primary_vehicle_type]' value='[rider_performance_analysis].[primary_vehicle_type]' />
+          <map key='[problematic_cities]' value='[anomaly_monitoring].[problematic_cities]' />
+          <map key='[problematic_hours]' value='[anomaly_monitoring].[problematic_hours]' />
+          <map key='[problematic_riders]' value='[anomaly_monitoring].[problematic_riders]' />
+          <map key='[rider_age]' value='[rider_performance_analysis].[rider_age]' />
+          <map key='[rider_count]' value='[operations_summary_for_tableau].[rider_count]' />
+          <map key='[rider_id]' value='[rider_performance_analysis].[rider_id]' />
+          <map key='[riders]' value='[city_performance_analysis].[riders]' />
+          <map key='[severe_delay_rate]' value='[anomaly_monitoring].[severe_delay_rate]' />
+          <map key='[severe_delays]' value='[anomaly_monitoring].[severe_delays]' />
+          <map key='[snack_rate]' value='[city_performance_analysis].[snack_rate]' />
+          <map key='[time_impact_vs_ideal]' value='[external_factors_analysis].[time_impact_vs_ideal]' />
+          <map key='[time_period (hourly_operations_analysis)]' value='[hourly_operations_analysis].[time_period]' />
+          <map key='[time_period]' value='[operations_summary_for_tableau].[time_period]' />
+          <map key='[total_orders (rider_performance_analysis)]' value='[rider_performance_analysis].[total_orders]' />
+          <map key='[total_orders]' value='[daily_operations_kpi].[total_orders]' />
+          <map key='[traffic_density (external_factors_analysis)]' value='[external_factors_analysis].[traffic_density]' />
+          <map key='[traffic_density]' value='[operations_summary_for_tableau].[traffic_density]' />
+          <map key='[vehicle_type]' value='[operations_summary_for_tableau].[vehicle_type]' />
+          <map key='[weather (external_factors_analysis)]' value='[external_factors_analysis].[weather]' />
+          <map key='[weather]' value='[operations_summary_for_tableau].[weather]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>order_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[order_date]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>order_date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>city_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[city_type]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>city_type</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>time_period</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[time_period]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>time_period</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>5</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>weather</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[weather]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>weather</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>traffic_density</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[traffic_density]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>traffic_density</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_festival</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[is_festival]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>is_festival</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_volume</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[order_volume]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>order_volume</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rider_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[rider_count]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>rider_count</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_delivery_time</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[avg_delivery_time]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>avg_delivery_time</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>13</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_rating</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_rating]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>avg_rating</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>on_time_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[on_time_rate]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>on_time_rate</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>orders_per_rider</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[orders_per_rider]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>orders_per_rider</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>24</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[order_type]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>order_type</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>vehicle_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[vehicle_type]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>vehicle_type</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_multi_delivery</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_multi_delivery]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>avg_multi_delivery</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[order_date (anomaly_monitoring)]</local-name>
+            <parent-name>[anomaly_monitoring]</parent-name>
+            <remote-alias>order_date</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+            <object-id>[anomaly_monitoring_B2A5824F96C44DD484083140E8212295]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>severe_delays</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[severe_delays]</local-name>
+            <parent-name>[anomaly_monitoring]</parent-name>
+            <remote-alias>severe_delays</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>23</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[anomaly_monitoring_B2A5824F96C44DD484083140E8212295]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>moderate_delays</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[moderate_delays]</local-name>
+            <parent-name>[anomaly_monitoring]</parent-name>
+            <remote-alias>moderate_delays</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>23</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[anomaly_monitoring_B2A5824F96C44DD484083140E8212295]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>severe_delay_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[severe_delay_rate]</local-name>
+            <parent-name>[anomaly_monitoring]</parent-name>
+            <remote-alias>severe_delay_rate</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[anomaly_monitoring_B2A5824F96C44DD484083140E8212295]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>low_rating_orders</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[low_rating_orders]</local-name>
+            <parent-name>[anomaly_monitoring]</parent-name>
+            <remote-alias>low_rating_orders</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>23</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[anomaly_monitoring_B2A5824F96C44DD484083140E8212295]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>low_rating_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[low_rating_rate]</local-name>
+            <parent-name>[anomaly_monitoring]</parent-name>
+            <remote-alias>low_rating_rate</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[anomaly_monitoring_B2A5824F96C44DD484083140E8212295]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>problematic_riders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[problematic_riders]</local-name>
+            <parent-name>[anomaly_monitoring]</parent-name>
+            <remote-alias>problematic_riders</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[anomaly_monitoring_B2A5824F96C44DD484083140E8212295]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>problematic_cities</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[problematic_cities]</local-name>
+            <parent-name>[anomaly_monitoring]</parent-name>
+            <remote-alias>problematic_cities</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[anomaly_monitoring_B2A5824F96C44DD484083140E8212295]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>problematic_hours</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[problematic_hours]</local-name>
+            <parent-name>[anomaly_monitoring]</parent-name>
+            <remote-alias>problematic_hours</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[anomaly_monitoring_B2A5824F96C44DD484083140E8212295]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>city_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[city_type (city_performance_analysis)]</local-name>
+            <parent-name>[city_performance_analysis]</parent-name>
+            <remote-alias>city_type</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <object-id>[city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[order_date (city_performance_analysis)]</local-name>
+            <parent-name>[city_performance_analysis]</parent-name>
+            <remote-alias>order_date</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+            <object-id>[city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[orders]</local-name>
+            <parent-name>[city_performance_analysis]</parent-name>
+            <remote-alias>orders</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>riders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[riders]</local-name>
+            <parent-name>[city_performance_analysis]</parent-name>
+            <remote-alias>riders</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_delivery_time</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[avg_delivery_time (city_performance_analysis)]</local-name>
+            <parent-name>[city_performance_analysis]</parent-name>
+            <remote-alias>avg_delivery_time</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>13</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_rating</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_rating (city_performance_analysis)]</local-name>
+            <parent-name>[city_performance_analysis]</parent-name>
+            <remote-alias>avg_rating</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>orders_per_rider</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[orders_per_rider (city_performance_analysis)]</local-name>
+            <parent-name>[city_performance_analysis]</parent-name>
+            <remote-alias>orders_per_rider</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>24</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>on_time_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[on_time_rate (city_performance_analysis)]</local-name>
+            <parent-name>[city_performance_analysis]</parent-name>
+            <remote-alias>on_time_rate</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>meal_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[meal_rate]</local-name>
+            <parent-name>[city_performance_analysis]</parent-name>
+            <remote-alias>meal_rate</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>snack_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[snack_rate]</local-name>
+            <parent-name>[city_performance_analysis]</parent-name>
+            <remote-alias>snack_rate</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>drinks_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[drinks_rate]</local-name>
+            <parent-name>[city_performance_analysis]</parent-name>
+            <remote-alias>drinks_rate</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>multi_delivery_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[multi_delivery_rate]</local-name>
+            <parent-name>[city_performance_analysis]</parent-name>
+            <remote-alias>multi_delivery_rate</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[order_date (daily_operations_kpi)]</local-name>
+            <parent-name>[daily_operations_kpi]</parent-name>
+            <remote-alias>order_date</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+            <object-id>[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_orders]</local-name>
+            <parent-name>[daily_operations_kpi]</parent-name>
+            <remote-alias>total_orders</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>active_riders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[active_riders]</local-name>
+            <parent-name>[daily_operations_kpi]</parent-name>
+            <remote-alias>active_riders</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_delivery_time</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[avg_delivery_time (daily_operations_kpi)]</local-name>
+            <parent-name>[daily_operations_kpi]</parent-name>
+            <remote-alias>avg_delivery_time</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>13</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_rider_rating</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_rider_rating]</local-name>
+            <parent-name>[daily_operations_kpi]</parent-name>
+            <remote-alias>avg_rider_rating</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>orders_per_rider</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[orders_per_rider (daily_operations_kpi)]</local-name>
+            <parent-name>[daily_operations_kpi]</parent-name>
+            <remote-alias>orders_per_rider</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>24</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>on_time_orders</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[on_time_orders]</local-name>
+            <parent-name>[daily_operations_kpi]</parent-name>
+            <remote-alias>on_time_orders</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>23</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>on_time_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[on_time_rate (daily_operations_kpi)]</local-name>
+            <parent-name>[daily_operations_kpi]</parent-name>
+            <remote-alias>on_time_rate</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>high_rating_orders</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[high_rating_orders]</local-name>
+            <parent-name>[daily_operations_kpi]</parent-name>
+            <remote-alias>high_rating_orders</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>23</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>high_rating_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[high_rating_rate]</local-name>
+            <parent-name>[daily_operations_kpi]</parent-name>
+            <remote-alias>high_rating_rate</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>delayed_orders</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[delayed_orders]</local-name>
+            <parent-name>[daily_operations_kpi]</parent-name>
+            <remote-alias>delayed_orders</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>23</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>delay_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[delay_rate]</local-name>
+            <parent-name>[daily_operations_kpi]</parent-name>
+            <remote-alias>delay_rate</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_festival_day</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[is_festival_day]</local-name>
+            <parent-name>[daily_operations_kpi]</parent-name>
+            <remote-alias>is_festival_day</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <object-id>[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>weather</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[weather (external_factors_analysis)]</local-name>
+            <parent-name>[external_factors_analysis]</parent-name>
+            <remote-alias>weather</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <object-id>[external_factors_analysis_3FECC1B9C40643039B36845D914DA726]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>traffic_density</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[traffic_density (external_factors_analysis)]</local-name>
+            <parent-name>[external_factors_analysis]</parent-name>
+            <remote-alias>traffic_density</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <object-id>[external_factors_analysis_3FECC1B9C40643039B36845D914DA726]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[order_date (external_factors_analysis)]</local-name>
+            <parent-name>[external_factors_analysis]</parent-name>
+            <remote-alias>order_date</remote-alias>
+            <ordinal>55</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+            <object-id>[external_factors_analysis_3FECC1B9C40643039B36845D914DA726]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[orders (external_factors_analysis)]</local-name>
+            <parent-name>[external_factors_analysis]</parent-name>
+            <remote-alias>orders</remote-alias>
+            <ordinal>56</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[external_factors_analysis_3FECC1B9C40643039B36845D914DA726]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_delivery_time</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[avg_delivery_time (external_factors_analysis)]</local-name>
+            <parent-name>[external_factors_analysis]</parent-name>
+            <remote-alias>avg_delivery_time</remote-alias>
+            <ordinal>57</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>13</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[external_factors_analysis_3FECC1B9C40643039B36845D914DA726]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_rating</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_rating (external_factors_analysis)]</local-name>
+            <parent-name>[external_factors_analysis]</parent-name>
+            <remote-alias>avg_rating</remote-alias>
+            <ordinal>58</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[external_factors_analysis_3FECC1B9C40643039B36845D914DA726]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>on_time_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[on_time_rate (external_factors_analysis)]</local-name>
+            <parent-name>[external_factors_analysis]</parent-name>
+            <remote-alias>on_time_rate</remote-alias>
+            <ordinal>59</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[external_factors_analysis_3FECC1B9C40643039B36845D914DA726]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>time_impact_vs_ideal</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[time_impact_vs_ideal]</local-name>
+            <parent-name>[external_factors_analysis]</parent-name>
+            <remote-alias>time_impact_vs_ideal</remote-alias>
+            <ordinal>60</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>14</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[external_factors_analysis_3FECC1B9C40643039B36845D914DA726]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>motorcycle_usage_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[motorcycle_usage_rate]</local-name>
+            <parent-name>[external_factors_analysis]</parent-name>
+            <remote-alias>motorcycle_usage_rate</remote-alias>
+            <ordinal>61</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[external_factors_analysis_3FECC1B9C40643039B36845D914DA726]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_hour</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[order_hour]</local-name>
+            <parent-name>[hourly_operations_analysis]</parent-name>
+            <remote-alias>order_hour</remote-alias>
+            <ordinal>63</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <object-id>[hourly_operations_analysis_6768D4C635AB479FAB1E5E9F451E59C6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>time_period</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[time_period (hourly_operations_analysis)]</local-name>
+            <parent-name>[hourly_operations_analysis]</parent-name>
+            <remote-alias>time_period</remote-alias>
+            <ordinal>64</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>9</width>
+            <contains-null>false</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[hourly_operations_analysis_6768D4C635AB479FAB1E5E9F451E59C6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[order_date (hourly_operations_analysis)]</local-name>
+            <parent-name>[hourly_operations_analysis]</parent-name>
+            <remote-alias>order_date</remote-alias>
+            <ordinal>65</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+            <object-id>[hourly_operations_analysis_6768D4C635AB479FAB1E5E9F451E59C6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[orders (hourly_operations_analysis)]</local-name>
+            <parent-name>[hourly_operations_analysis]</parent-name>
+            <remote-alias>orders</remote-alias>
+            <ordinal>66</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[hourly_operations_analysis_6768D4C635AB479FAB1E5E9F451E59C6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>active_riders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[active_riders (hourly_operations_analysis)]</local-name>
+            <parent-name>[hourly_operations_analysis]</parent-name>
+            <remote-alias>active_riders</remote-alias>
+            <ordinal>67</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[hourly_operations_analysis_6768D4C635AB479FAB1E5E9F451E59C6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_delivery_time</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[avg_delivery_time (hourly_operations_analysis)]</local-name>
+            <parent-name>[hourly_operations_analysis]</parent-name>
+            <remote-alias>avg_delivery_time</remote-alias>
+            <ordinal>68</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>13</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[hourly_operations_analysis_6768D4C635AB479FAB1E5E9F451E59C6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_rating</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_rating (hourly_operations_analysis)]</local-name>
+            <parent-name>[hourly_operations_analysis]</parent-name>
+            <remote-alias>avg_rating</remote-alias>
+            <ordinal>69</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[hourly_operations_analysis_6768D4C635AB479FAB1E5E9F451E59C6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>on_time_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[on_time_rate (hourly_operations_analysis)]</local-name>
+            <parent-name>[hourly_operations_analysis]</parent-name>
+            <remote-alias>on_time_rate</remote-alias>
+            <ordinal>70</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[hourly_operations_analysis_6768D4C635AB479FAB1E5E9F451E59C6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>delivery_time_vs_daily_avg</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[delivery_time_vs_daily_avg]</local-name>
+            <parent-name>[hourly_operations_analysis]</parent-name>
+            <remote-alias>delivery_time_vs_daily_avg</remote-alias>
+            <ordinal>71</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>14</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[hourly_operations_analysis_6768D4C635AB479FAB1E5E9F451E59C6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rider_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[rider_id]</local-name>
+            <parent-name>[rider_performance_analysis]</parent-name>
+            <remote-alias>rider_id</remote-alias>
+            <ordinal>73</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <object-id>[rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[order_date (rider_performance_analysis)]</local-name>
+            <parent-name>[rider_performance_analysis]</parent-name>
+            <remote-alias>order_date</remote-alias>
+            <ordinal>74</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+            <object-id>[rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rider_age</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rider_age]</local-name>
+            <parent-name>[rider_performance_analysis]</parent-name>
+            <remote-alias>rider_age</remote-alias>
+            <ordinal>75</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_orders (rider_performance_analysis)]</local-name>
+            <parent-name>[rider_performance_analysis]</parent-name>
+            <remote-alias>total_orders</remote-alias>
+            <ordinal>76</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_delivery_time</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[avg_delivery_time (rider_performance_analysis)]</local-name>
+            <parent-name>[rider_performance_analysis]</parent-name>
+            <remote-alias>avg_delivery_time</remote-alias>
+            <ordinal>77</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>13</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_rating</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_rating (rider_performance_analysis)]</local-name>
+            <parent-name>[rider_performance_analysis]</parent-name>
+            <remote-alias>avg_rating</remote-alias>
+            <ordinal>78</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>on_time_orders</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[on_time_orders (rider_performance_analysis)]</local-name>
+            <parent-name>[rider_performance_analysis]</parent-name>
+            <remote-alias>on_time_orders</remote-alias>
+            <ordinal>79</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>23</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>on_time_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[on_time_rate (rider_performance_analysis)]</local-name>
+            <parent-name>[rider_performance_analysis]</parent-name>
+            <remote-alias>on_time_rate</remote-alias>
+            <ordinal>80</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_multi_delivery</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_multi_delivery (rider_performance_analysis)]</local-name>
+            <parent-name>[rider_performance_analysis]</parent-name>
+            <remote-alias>avg_multi_delivery</remote-alias>
+            <ordinal>81</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>performance_score</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[performance_score]</local-name>
+            <parent-name>[rider_performance_analysis]</parent-name>
+            <remote-alias>performance_score</remote-alias>
+            <ordinal>82</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>primary_vehicle_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[primary_vehicle_type]</local-name>
+            <parent-name>[rider_performance_analysis]</parent-name>
+            <remote-alias>primary_vehicle_type</remote-alias>
+            <ordinal>83</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <object-id>[rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='anomaly_monitoring' datatype='table' name='[__tableau_internal_object_id__].[anomaly_monitoring_B2A5824F96C44DD484083140E8212295]' role='measure' type='quantitative' />
+      <column caption='city_performance_analysis' datatype='table' name='[__tableau_internal_object_id__].[city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8]' role='measure' type='quantitative' />
+      <column caption='daily_operations_kpi' datatype='table' name='[__tableau_internal_object_id__].[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]' role='measure' type='quantitative' />
+      <column caption='external_factors_analysis' datatype='table' name='[__tableau_internal_object_id__].[external_factors_analysis_3FECC1B9C40643039B36845D914DA726]' role='measure' type='quantitative' />
+      <column caption='hourly_operations_analysis' datatype='table' name='[__tableau_internal_object_id__].[hourly_operations_analysis_6768D4C635AB479FAB1E5E9F451E59C6]' role='measure' type='quantitative' />
+      <column caption='operations_summary_for_tableau' datatype='table' name='[__tableau_internal_object_id__].[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]' role='measure' type='quantitative' />
+      <column caption='rider_performance_analysis' datatype='table' name='[__tableau_internal_object_id__].[rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A]' role='measure' type='quantitative' />
+      <column caption='Active Riders (Hourly Operations Analysis)' datatype='integer' name='[active_riders (hourly_operations_analysis)]' role='measure' type='quantitative' />
+      <column caption='Active Riders' datatype='integer' name='[active_riders]' role='measure' type='quantitative' />
+      <column caption='Avg Delivery Time (City Performance Analysis)' datatype='real' name='[avg_delivery_time (city_performance_analysis)]' role='measure' type='quantitative' />
+      <column caption='Avg Delivery Time (Daily Operations Kpi)' datatype='real' name='[avg_delivery_time (daily_operations_kpi)]' role='measure' type='quantitative' />
+      <column caption='Avg Delivery Time (External Factors Analysis)' datatype='real' name='[avg_delivery_time (external_factors_analysis)]' role='measure' type='quantitative' />
+      <column caption='Avg Delivery Time (Hourly Operations Analysis)' datatype='real' name='[avg_delivery_time (hourly_operations_analysis)]' role='measure' type='quantitative' />
+      <column caption='Avg Delivery Time (Rider Performance Analysis)' datatype='real' name='[avg_delivery_time (rider_performance_analysis)]' role='measure' type='quantitative' />
+      <column caption='Avg Delivery Time' datatype='real' name='[avg_delivery_time]' role='measure' type='quantitative' />
+      <column caption='Avg Multi Delivery (Rider Performance Analysis)' datatype='real' name='[avg_multi_delivery (rider_performance_analysis)]' role='measure' type='quantitative' />
+      <column caption='Avg Multi Delivery' datatype='real' name='[avg_multi_delivery]' role='measure' type='quantitative' />
+      <column caption='Avg Rating (City Performance Analysis)' datatype='real' name='[avg_rating (city_performance_analysis)]' role='measure' type='quantitative' />
+      <column caption='Avg Rating (External Factors Analysis)' datatype='real' name='[avg_rating (external_factors_analysis)]' role='measure' type='quantitative' />
+      <column caption='Avg Rating (Hourly Operations Analysis)' datatype='real' name='[avg_rating (hourly_operations_analysis)]' role='measure' type='quantitative' />
+      <column caption='Avg Rating (Rider Performance Analysis)' datatype='real' name='[avg_rating (rider_performance_analysis)]' role='measure' type='quantitative' />
+      <column caption='Avg Rating' datatype='real' name='[avg_rating]' role='measure' type='quantitative' />
+      <column caption='Avg Rider Rating' datatype='real' name='[avg_rider_rating]' role='measure' type='quantitative' />
+      <column caption='City Type (City Performance Analysis)' datatype='string' name='[city_type (city_performance_analysis)]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='City Type' datatype='string' name='[city_type]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Delay Rate' datatype='real' name='[delay_rate]' role='measure' type='quantitative' />
+      <column caption='Delayed Orders' datatype='real' name='[delayed_orders]' role='measure' type='quantitative' />
+      <column caption='Delivery Time Vs Daily Avg' datatype='real' name='[delivery_time_vs_daily_avg]' role='measure' type='quantitative' />
+      <column caption='Drinks Rate' datatype='real' name='[drinks_rate]' role='measure' type='quantitative' />
+      <column caption='High Rating Orders' datatype='real' name='[high_rating_orders]' role='measure' type='quantitative' />
+      <column caption='High Rating Rate' datatype='real' name='[high_rating_rate]' role='measure' type='quantitative' />
+      <column caption='Is Festival' datatype='integer' name='[is_festival]' role='measure' type='quantitative' />
+      <column caption='Is Festival Day' datatype='integer' name='[is_festival_day]' role='dimension' type='quantitative' />
+      <column caption='Low Rating Orders' datatype='real' name='[low_rating_orders]' role='measure' type='quantitative' />
+      <column caption='Low Rating Rate' datatype='real' name='[low_rating_rate]' role='measure' type='quantitative' />
+      <column caption='Meal Rate' datatype='real' name='[meal_rate]' role='measure' type='quantitative' />
+      <column caption='Moderate Delays' datatype='real' name='[moderate_delays]' role='measure' type='quantitative' />
+      <column caption='Motorcycle Usage Rate' datatype='real' name='[motorcycle_usage_rate]' role='measure' type='quantitative' />
+      <column caption='Multi Delivery Rate' datatype='real' name='[multi_delivery_rate]' role='measure' type='quantitative' />
+      <column caption='On Time Orders (Rider Performance Analysis)' datatype='real' name='[on_time_orders (rider_performance_analysis)]' role='measure' type='quantitative' />
+      <column caption='On Time Orders' datatype='real' name='[on_time_orders]' role='measure' type='quantitative' />
+      <column caption='On Time Rate (City Performance Analysis)' datatype='real' name='[on_time_rate (city_performance_analysis)]' role='measure' type='quantitative' />
+      <column caption='On Time Rate (Daily Operations Kpi)' datatype='real' name='[on_time_rate (daily_operations_kpi)]' role='measure' type='quantitative' />
+      <column caption='On Time Rate (External Factors Analysis)' datatype='real' name='[on_time_rate (external_factors_analysis)]' role='measure' type='quantitative' />
+      <column caption='On Time Rate (Hourly Operations Analysis)' datatype='real' name='[on_time_rate (hourly_operations_analysis)]' role='measure' type='quantitative' />
+      <column caption='On Time Rate (Rider Performance Analysis)' datatype='real' name='[on_time_rate (rider_performance_analysis)]' role='measure' type='quantitative' />
+      <column caption='On Time Rate' datatype='real' name='[on_time_rate]' role='measure' type='quantitative' />
+      <column aggregation='Count' caption='Order Date (Anomaly Monitoring)' datatype='date' name='[order_date (anomaly_monitoring)]' role='dimension' type='ordinal' />
+      <column aggregation='Count' caption='Order Date (City Performance Analysis)' datatype='date' name='[order_date (city_performance_analysis)]' role='dimension' semantic-role='[City].[Name]' type='ordinal' />
+      <column aggregation='Count' caption='Order Date (Daily Operations Kpi)' datatype='date' name='[order_date (daily_operations_kpi)]' role='dimension' type='ordinal' />
+      <column aggregation='Count' caption='Order Date (External Factors Analysis)' datatype='date' name='[order_date (external_factors_analysis)]' role='dimension' type='ordinal' />
+      <column aggregation='Count' caption='Order Date (Hourly Operations Analysis)' datatype='date' name='[order_date (hourly_operations_analysis)]' role='dimension' type='ordinal' />
+      <column aggregation='Count' caption='Order Date (Rider Performance Analysis)' datatype='date' name='[order_date (rider_performance_analysis)]' role='dimension' type='ordinal' />
+      <column aggregation='Count' caption='Order Date' datatype='date' datatype-customized='true' name='[order_date]' role='dimension' type='ordinal' />
+      <column caption='Order Hour' datatype='integer' name='[order_hour]' role='measure' type='quantitative' />
+      <column caption='Order Type' datatype='string' name='[order_type]' role='dimension' type='nominal' />
+      <column caption='Order Volume' datatype='integer' name='[order_volume]' role='measure' type='quantitative' />
+      <column caption='Orders (External Factors Analysis)' datatype='integer' name='[orders (external_factors_analysis)]' role='measure' type='quantitative' />
+      <column caption='Orders (Hourly Operations Analysis)' datatype='integer' name='[orders (hourly_operations_analysis)]' role='measure' type='quantitative' />
+      <column caption='Orders' datatype='integer' name='[orders]' role='measure' type='quantitative' />
+      <column caption='Orders Per Rider (City Performance Analysis)' datatype='real' name='[orders_per_rider (city_performance_analysis)]' role='measure' type='quantitative' />
+      <column caption='Orders Per Rider (Daily Operations Kpi)' datatype='real' name='[orders_per_rider (daily_operations_kpi)]' role='measure' type='quantitative' />
+      <column caption='Orders Per Rider' datatype='real' name='[orders_per_rider]' role='measure' type='quantitative' />
+      <column caption='Performance Score' datatype='real' name='[performance_score]' role='measure' type='quantitative' />
+      <column caption='Primary Vehicle Type' datatype='string' name='[primary_vehicle_type]' role='dimension' type='nominal' />
+      <column caption='Problematic Cities' datatype='integer' name='[problematic_cities]' role='measure' type='quantitative' />
+      <column caption='Problematic Hours' datatype='integer' name='[problematic_hours]' role='measure' type='quantitative' />
+      <column caption='Problematic Riders' datatype='integer' name='[problematic_riders]' role='measure' type='quantitative' />
+      <column caption='Rider Age' datatype='real' name='[rider_age]' role='measure' type='quantitative' />
+      <column caption='Rider Count' datatype='integer' name='[rider_count]' role='measure' type='quantitative' />
+      <column caption='Rider Id' datatype='string' name='[rider_id]' role='dimension' type='nominal' />
+      <column caption='Riders' datatype='integer' name='[riders]' role='measure' type='quantitative' />
+      <column caption='Severe Delay Rate' datatype='real' name='[severe_delay_rate]' role='measure' type='quantitative' />
+      <column caption='Severe Delays' datatype='real' name='[severe_delays]' role='measure' type='quantitative' />
+      <column caption='Snack Rate' datatype='real' name='[snack_rate]' role='measure' type='quantitative' />
+      <column caption='Time Impact Vs Ideal' datatype='real' name='[time_impact_vs_ideal]' role='measure' type='quantitative' />
+      <column caption='Time Period (Hourly Operations Analysis)' datatype='string' name='[time_period (hourly_operations_analysis)]' role='dimension' type='nominal' />
+      <column caption='Time Period' datatype='string' name='[time_period]' role='dimension' type='nominal' />
+      <column caption='Total Orders (Rider Performance Analysis)' datatype='integer' name='[total_orders (rider_performance_analysis)]' role='measure' type='quantitative' />
+      <column caption='Total Orders' datatype='integer' name='[total_orders]' role='measure' type='quantitative' />
+      <column caption='Traffic Density (External Factors Analysis)' datatype='string' name='[traffic_density (external_factors_analysis)]' role='dimension' type='nominal' />
+      <column caption='Traffic Density' datatype='string' name='[traffic_density]' role='dimension' type='nominal' />
+      <column caption='Vehicle Type' datatype='string' name='[vehicle_type]' role='dimension' type='nominal' />
+      <column caption='Weather (External Factors Analysis)' datatype='string' name='[weather (external_factors_analysis)]' role='dimension' type='nominal' />
+      <column caption='Weather' datatype='string' name='[weather]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='anomaly_monitoring' id='anomaly_monitoring_B2A5824F96C44DD484083140E8212295'>
+            <properties context=''>
+              <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='anomaly_monitoring' table='[anomaly_monitoring]' type='table' />
+            </properties>
+          </object>
+          <object caption='city_performance_analysis' id='city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8'>
+            <properties context=''>
+              <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='city_performance_analysis' table='[city_performance_analysis]' type='table' />
+            </properties>
+          </object>
+          <object caption='daily_operations_kpi' id='daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E'>
+            <properties context=''>
+              <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='daily_operations_kpi' table='[daily_operations_kpi]' type='table' />
+            </properties>
+          </object>
+          <object caption='external_factors_analysis' id='external_factors_analysis_3FECC1B9C40643039B36845D914DA726'>
+            <properties context=''>
+              <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='external_factors_analysis' table='[external_factors_analysis]' type='table' />
+            </properties>
+          </object>
+          <object caption='hourly_operations_analysis' id='hourly_operations_analysis_6768D4C635AB479FAB1E5E9F451E59C6'>
+            <properties context=''>
+              <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='hourly_operations_analysis' table='[hourly_operations_analysis]' type='table' />
+            </properties>
+          </object>
+          <object caption='operations_summary_for_tableau' id='operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907'>
+            <properties context=''>
+              <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='operations_summary_for_tableau' table='[operations_summary_for_tableau]' type='table'>
+                <columns>
+                  <column datatype='date' date-parse-format='yyyy-MM-dd' name='order_date' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='rider_performance_analysis' id='rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A'>
+            <properties context=''>
+              <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='rider_performance_analysis' table='[rider_performance_analysis]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[order_date]' />
+              <expression op='[order_date (anomaly_monitoring)]' />
+            </expression>
+            <first-end-point object-id='operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907' />
+            <second-end-point object-id='anomaly_monitoring_B2A5824F96C44DD484083140E8212295' />
+          </relationship>
+          <relationship>
+            <expression op='AND'>
+              <expression op='='>
+                <expression op='[order_date]' />
+                <expression op='[order_date (city_performance_analysis)]' />
+              </expression>
+              <expression op='='>
+                <expression op='[city_type]' />
+                <expression op='[city_type (city_performance_analysis)]' />
+              </expression>
+            </expression>
+            <first-end-point object-id='operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907' />
+            <second-end-point object-id='city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[order_date]' />
+              <expression op='[order_date (daily_operations_kpi)]' />
+            </expression>
+            <first-end-point object-id='operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907' />
+            <second-end-point object-id='daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[order_date]' />
+              <expression op='[order_date (external_factors_analysis)]' />
+            </expression>
+            <first-end-point object-id='operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907' />
+            <second-end-point object-id='external_factors_analysis_3FECC1B9C40643039B36845D914DA726' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[order_date]' />
+              <expression op='[order_date (hourly_operations_analysis)]' />
+            </expression>
+            <first-end-point object-id='operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907' />
+            <second-end-point object-id='hourly_operations_analysis_6768D4C635AB479FAB1E5E9F451E59C6' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[order_date]' />
+              <expression op='[order_date (rider_performance_analysis)]' />
+            </expression>
+            <first-end-point object-id='operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907' />
+            <second-end-point object-id='rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <shared-views>
+    <shared-view name='federated.17oquoq0d9mupt1844s1818be3pb'>
+      <datasources>
+        <datasource caption='operations_summary_for_tableau+ (food_delivery)' name='federated.17oquoq0d9mupt1844s1818be3pb' />
+      </datasources>
+      <datasource-dependencies datasource='federated.17oquoq0d9mupt1844s1818be3pb'>
+        <column caption='City Type' datatype='string' name='[city_type]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+        <column-instance column='[city_type]' derivation='None' name='[none:city_type:nk]' pivot='key' type='nominal' />
+        <column-instance column='[order_date]' derivation='None' name='[none:order_date:qk]' pivot='key' type='quantitative' />
+        <column aggregation='Count' caption='Order Date' datatype='date' datatype-customized='true' name='[order_date]' role='dimension' type='ordinal' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.17oquoq0d9mupt1844s1818be3pb].[none:city_type:nk]'>
+        <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+          <groupfilter function='member' level='[none:city_type:nk]' member='&quot;Metropolitan&quot;' />
+          <groupfilter function='member' level='[none:city_type:nk]' member='&quot;NaN&quot;' />
+          <groupfilter function='member' level='[none:city_type:nk]' member='&quot;Semi_Urban&quot;' />
+          <groupfilter function='member' level='[none:city_type:nk]' member='&quot;Urban&quot;' />
+        </groupfilter>
+      </filter>
+      <filter class='quantitative' column='[federated.17oquoq0d9mupt1844s1818be3pb].[none:order_date:qk]' included-values='in-range'>
+        <min>#2022-02-11#</min>
+        <max>#2025-06-29#</max>
+      </filter>
+    </shared-view>
+  </shared-views>
+  <worksheets>
+    <worksheet name='Anomaly Detection'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{2146BE53-CC20-422C-9733-D02A683ABCD1}' />
+    </worksheet>
+    <worksheet name='Delivery Efficiency'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{5567EC13-3C5E-43BF-9CA2-904E2E4418A2}' />
+    </worksheet>
+    <worksheet name='Operation Overview'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='operations_summary_for_tableau+ (food_delivery)' name='federated.17oquoq0d9mupt1844s1818be3pb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.17oquoq0d9mupt1844s1818be3pb'>
+            <column caption='Active Riders' datatype='integer' name='[active_riders]' role='measure' type='quantitative' />
+            <column caption='Avg Delivery Time (Daily Operations Kpi)' datatype='real' name='[avg_delivery_time (daily_operations_kpi)]' role='measure' type='quantitative' />
+            <column caption='City Type' datatype='string' name='[city_type]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column-instance column='[city_type]' derivation='None' name='[none:city_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[order_date]' derivation='None' name='[none:order_date:qk]' pivot='key' type='quantitative' />
+            <column caption='On Time Rate (Daily Operations Kpi)' datatype='real' name='[on_time_rate (daily_operations_kpi)]' role='measure' type='quantitative' />
+            <column aggregation='Count' caption='Order Date' datatype='date' datatype-customized='true' name='[order_date]' role='dimension' type='ordinal' />
+            <column-instance column='[active_riders]' derivation='Sum' name='[sum:active_riders:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[avg_delivery_time (daily_operations_kpi)]' derivation='Sum' name='[sum:avg_delivery_time (daily_operations_kpi):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[on_time_rate (daily_operations_kpi)]' derivation='Sum' name='[sum:on_time_rate (daily_operations_kpi):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_orders]' derivation='Sum' name='[sum:total_orders:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Orders' datatype='integer' name='[total_orders]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:order_date:qk]</column>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:city_type:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.17oquoq0d9mupt1844s1818be3pb].[sum:total_orders:qk]' />
+              <text column='[federated.17oquoq0d9mupt1844s1818be3pb].[sum:on_time_rate (daily_operations_kpi):qk]' />
+              <text column='[federated.17oquoq0d9mupt1844s1818be3pb].[sum:avg_delivery_time (daily_operations_kpi):qk]' />
+              <text column='[federated.17oquoq0d9mupt1844s1818be3pb].[sum:active_riders:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#4e79a7' fontname='Arial' fontsize='14'><![CDATA[Total Orders: <[federated.17oquoq0d9mupt1844s1818be3pb].[sum:total_orders:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#4e79a7' fontname='Arial' fontsize='14'><![CDATA[<[federated.17oquoq0d9mupt1844s1818be3pb].[sum:on_time_rate (daily_operations_kpi):qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#4e79a7' fontname='Arial' fontsize='14'><![CDATA[<[federated.17oquoq0d9mupt1844s1818be3pb].[sum:avg_delivery_time (daily_operations_kpi):qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#4e79a7' fontname='Arial' fontsize='14'><![CDATA[<[federated.17oquoq0d9mupt1844s1818be3pb].[sum:active_riders:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{258C8773-365B-46F0-87C0-C675E48F6320}' />
+    </worksheet>
+    <worksheet name='Operation Overview (2)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='operations_summary_for_tableau+ (food_delivery)' name='federated.17oquoq0d9mupt1844s1818be3pb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.17oquoq0d9mupt1844s1818be3pb'>
+            <column caption='Active Riders' datatype='integer' name='[active_riders]' role='measure' type='quantitative' />
+            <column caption='Avg Delivery Time (Daily Operations Kpi)' datatype='real' name='[avg_delivery_time (daily_operations_kpi)]' role='measure' type='quantitative' />
+            <column caption='City Type' datatype='string' name='[city_type]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column-instance column='[city_type]' derivation='None' name='[none:city_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[order_date]' derivation='None' name='[none:order_date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[order_date]' derivation='None' name='[none:order_date:qk]' pivot='key' type='quantitative' />
+            <column caption='On Time Rate (Daily Operations Kpi)' datatype='real' name='[on_time_rate (daily_operations_kpi)]' role='measure' type='quantitative' />
+            <column aggregation='Count' caption='Order Date' datatype='date' datatype-customized='true' name='[order_date]' role='dimension' type='ordinal' />
+            <column-instance column='[active_riders]' derivation='Sum' name='[sum:active_riders:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[avg_delivery_time (daily_operations_kpi)]' derivation='Sum' name='[sum:avg_delivery_time (daily_operations_kpi):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[on_time_rate (daily_operations_kpi)]' derivation='Sum' name='[sum:on_time_rate (daily_operations_kpi):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_orders]' derivation='Sum' name='[sum:total_orders:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Orders' datatype='integer' name='[total_orders]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.17oquoq0d9mupt1844s1818be3pb].[none:order_date:ok]'>
+            <groupfilter function='level-members' level='[none:order_date:ok]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:order_date:ok]</column>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:order_date:qk]</column>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:city_type:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.17oquoq0d9mupt1844s1818be3pb].[sum:total_orders:qk]' />
+              <text column='[federated.17oquoq0d9mupt1844s1818be3pb].[sum:on_time_rate (daily_operations_kpi):qk]' />
+              <text column='[federated.17oquoq0d9mupt1844s1818be3pb].[sum:avg_delivery_time (daily_operations_kpi):qk]' />
+              <text column='[federated.17oquoq0d9mupt1844s1818be3pb].[sum:active_riders:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#4e79a7' fontname='Arial' fontsize='14'><![CDATA[Total Orders: <[federated.17oquoq0d9mupt1844s1818be3pb].[sum:total_orders:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#4e79a7' fontname='Arial' fontsize='14'><![CDATA[<[federated.17oquoq0d9mupt1844s1818be3pb].[sum:on_time_rate (daily_operations_kpi):qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#4e79a7' fontname='Arial' fontsize='14'><![CDATA[<[federated.17oquoq0d9mupt1844s1818be3pb].[sum:avg_delivery_time (daily_operations_kpi):qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#4e79a7' fontname='Arial' fontsize='14'><![CDATA[<[federated.17oquoq0d9mupt1844s1818be3pb].[sum:active_riders:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{A3215684-B296-4051-97E3-89437F68ACE3}' />
+    </worksheet>
+    <worksheet name='Rider Performance'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{509C884D-6E07-465A-B59C-CE8C50FAE539}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Operation Overview'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='241'>
+            <card param='[federated.17oquoq0d9mupt1844s1818be3pb].[none:city_type:nk]' type='filter' />
+            <card param='[federated.17oquoq0d9mupt1844s1818be3pb].[none:order_date:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.17oquoq0d9mupt1844s1818be3pb].[none:city_type:nk]</field>
+            <field>[federated.17oquoq0d9mupt1844s1818be3pb].[none:order_date:qk]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='4' />
+      </viewpoint>
+      <simple-id uuid='{576352A6-95C0-4F92-AF17-9E7507447C8C}' />
+    </window>
+    <window class='worksheet' name='Operation Overview (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='typeinlist' param='[federated.17oquoq0d9mupt1844s1818be3pb].[none:order_date:nk]' show-morefewerbutton='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.17oquoq0d9mupt1844s1818be3pb].[none:order_date:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{60702FEB-489B-4E73-AF2A-95A76B19139B}' />
+    </window>
+    <window class='worksheet' name='Delivery Efficiency'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7BD1CB58-55D7-484B-BD76-1407719D9B4F}' />
+    </window>
+    <window class='worksheet' name='Rider Performance'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6420DE2E-55C2-46B0-9001-8A4F04A91466}' />
+    </window>
+    <window class='worksheet' name='Anomaly Detection'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B1FDF00E-BB6E-4DC3-AD41-DC2E7B431750}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='384' name='Anomaly Detection' width='384'>
+      iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAFXUlEQVR4nO3VMQEAIAzAMMC/5yFjRxMF/XpnZg4AOW87AIAdBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEfFxoG/IiMv0YAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='384' name='Delivery Efficiency' width='384'>
+      iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAFXUlEQVR4nO3VMQEAIAzAMMC/5yFjRxMF/XpnZg4AOW87AIAdBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEfFxoG/IiMv0YAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='184' name='Operation Overview' width='384'>
+      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
+    </thumbnail>
+    <thumbnail height='184' name='Operation Overview (2)' width='384'>
+      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
+    </thumbnail>
+    <thumbnail height='384' name='Rider Performance' width='384'>
+      iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAFXUlEQVR4nO3VMQEAIAzAMMC/5yFjRxMF/XpnZg4AOW87AIAdBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEfFxoG/IiMv0YAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
