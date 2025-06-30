@@ -1,0 +1,3085 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1112.0850                               -->
+<workbook original-version='18.1' source-build='2024.3.1 (20243.24.1112.0850)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='operations_summary_for_tableau+ (food_delivery)' inline='true' name='federated.17oquoq0d9mupt1844s1818be3pb' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='127.0.0.1' name='mysql.139dkf00wdzz1518eee4c1k4ceg7'>
+            <connection class='mysql' dbname='food_delivery' odbc-native-protocol='' one-time-sql='' port='3306' server='127.0.0.1' source-charset='' username='root' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='operations_summary_for_tableau' table='[operations_summary_for_tableau]' type='table'>
+            <columns>
+              <column datatype='date' date-parse-format='yyyy-MM-dd' name='order_date' />
+            </columns>
+          </relation>
+          <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='anomaly_monitoring' table='[anomaly_monitoring]' type='table' />
+          <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='city_performance_analysis' table='[city_performance_analysis]' type='table' />
+          <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='daily_operations_kpi' table='[daily_operations_kpi]' type='table' />
+          <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='external_factors_analysis' table='[external_factors_analysis]' type='table' />
+          <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='hourly_operations_analysis' table='[hourly_operations_analysis]' type='table' />
+          <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='problem_hotspot_analysis' table='[problem_hotspot_analysis]' type='table' />
+          <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='rider_performance_analysis' table='[rider_performance_analysis]' type='table' />
+        </relation>
+        <cols>
+          <map key='[active_riders (hourly_operations_analysis)]' value='[hourly_operations_analysis].[active_riders]' />
+          <map key='[active_riders]' value='[daily_operations_kpi].[active_riders]' />
+          <map key='[avg_delivery_time (city_performance_analysis)]' value='[city_performance_analysis].[avg_delivery_time]' />
+          <map key='[avg_delivery_time (daily_operations_kpi)]' value='[daily_operations_kpi].[avg_delivery_time]' />
+          <map key='[avg_delivery_time (external_factors_analysis)]' value='[external_factors_analysis].[avg_delivery_time]' />
+          <map key='[avg_delivery_time (hourly_operations_analysis)]' value='[hourly_operations_analysis].[avg_delivery_time]' />
+          <map key='[avg_delivery_time (rider_performance_analysis)]' value='[rider_performance_analysis].[avg_delivery_time]' />
+          <map key='[avg_delivery_time]' value='[operations_summary_for_tableau].[avg_delivery_time]' />
+          <map key='[avg_multi_delivery (rider_performance_analysis)]' value='[rider_performance_analysis].[avg_multi_delivery]' />
+          <map key='[avg_multi_delivery]' value='[operations_summary_for_tableau].[avg_multi_delivery]' />
+          <map key='[avg_rating (city_performance_analysis)]' value='[city_performance_analysis].[avg_rating]' />
+          <map key='[avg_rating (external_factors_analysis)]' value='[external_factors_analysis].[avg_rating]' />
+          <map key='[avg_rating (hourly_operations_analysis)]' value='[hourly_operations_analysis].[avg_rating]' />
+          <map key='[avg_rating (rider_performance_analysis)]' value='[rider_performance_analysis].[avg_rating]' />
+          <map key='[avg_rating]' value='[operations_summary_for_tableau].[avg_rating]' />
+          <map key='[avg_rider_rating]' value='[daily_operations_kpi].[avg_rider_rating]' />
+          <map key='[city_type (city_performance_analysis)]' value='[city_performance_analysis].[city_type]' />
+          <map key='[city_type (problem_hotspot_analysis)]' value='[problem_hotspot_analysis].[city_type]' />
+          <map key='[city_type]' value='[operations_summary_for_tableau].[city_type]' />
+          <map key='[delay_rate]' value='[daily_operations_kpi].[delay_rate]' />
+          <map key='[delayed_orders]' value='[daily_operations_kpi].[delayed_orders]' />
+          <map key='[delivery_lat]' value='[problem_hotspot_analysis].[delivery_lat]' />
+          <map key='[delivery_lng]' value='[problem_hotspot_analysis].[delivery_lng]' />
+          <map key='[delivery_time]' value='[problem_hotspot_analysis].[delivery_time]' />
+          <map key='[delivery_time_vs_daily_avg]' value='[hourly_operations_analysis].[delivery_time_vs_daily_avg]' />
+          <map key='[drinks_rate]' value='[city_performance_analysis].[drinks_rate]' />
+          <map key='[high_rating_orders]' value='[daily_operations_kpi].[high_rating_orders]' />
+          <map key='[high_rating_rate]' value='[daily_operations_kpi].[high_rating_rate]' />
+          <map key='[is_festival]' value='[operations_summary_for_tableau].[is_festival]' />
+          <map key='[is_festival_day]' value='[daily_operations_kpi].[is_festival_day]' />
+          <map key='[is_low_rating]' value='[problem_hotspot_analysis].[is_low_rating]' />
+          <map key='[is_overtime]' value='[problem_hotspot_analysis].[is_overtime]' />
+          <map key='[is_severe_delay]' value='[problem_hotspot_analysis].[is_severe_delay]' />
+          <map key='[low_rating_orders]' value='[anomaly_monitoring].[low_rating_orders]' />
+          <map key='[low_rating_rate]' value='[anomaly_monitoring].[low_rating_rate]' />
+          <map key='[meal_rate]' value='[city_performance_analysis].[meal_rate]' />
+          <map key='[moderate_delays]' value='[anomaly_monitoring].[moderate_delays]' />
+          <map key='[motorcycle_usage_rate]' value='[external_factors_analysis].[motorcycle_usage_rate]' />
+          <map key='[multi_delivery_rate]' value='[city_performance_analysis].[multi_delivery_rate]' />
+          <map key='[on_time_orders (rider_performance_analysis)]' value='[rider_performance_analysis].[on_time_orders]' />
+          <map key='[on_time_orders]' value='[daily_operations_kpi].[on_time_orders]' />
+          <map key='[on_time_rate (city_performance_analysis)]' value='[city_performance_analysis].[on_time_rate]' />
+          <map key='[on_time_rate (daily_operations_kpi)]' value='[daily_operations_kpi].[on_time_rate]' />
+          <map key='[on_time_rate (external_factors_analysis)]' value='[external_factors_analysis].[on_time_rate]' />
+          <map key='[on_time_rate (hourly_operations_analysis)]' value='[hourly_operations_analysis].[on_time_rate]' />
+          <map key='[on_time_rate (rider_performance_analysis)]' value='[rider_performance_analysis].[on_time_rate]' />
+          <map key='[on_time_rate]' value='[operations_summary_for_tableau].[on_time_rate]' />
+          <map key='[order_date (anomaly_monitoring)]' value='[anomaly_monitoring].[order_date]' />
+          <map key='[order_date (city_performance_analysis)]' value='[city_performance_analysis].[order_date]' />
+          <map key='[order_date (daily_operations_kpi)]' value='[daily_operations_kpi].[order_date]' />
+          <map key='[order_date (external_factors_analysis)]' value='[external_factors_analysis].[order_date]' />
+          <map key='[order_date (hourly_operations_analysis)]' value='[hourly_operations_analysis].[order_date]' />
+          <map key='[order_date (problem_hotspot_analysis)]' value='[problem_hotspot_analysis].[order_date]' />
+          <map key='[order_date (rider_performance_analysis)]' value='[rider_performance_analysis].[order_date]' />
+          <map key='[order_date]' value='[operations_summary_for_tableau].[order_date]' />
+          <map key='[order_hour]' value='[hourly_operations_analysis].[order_hour]' />
+          <map key='[order_type]' value='[operations_summary_for_tableau].[order_type]' />
+          <map key='[order_volume]' value='[operations_summary_for_tableau].[order_volume]' />
+          <map key='[orders (external_factors_analysis)]' value='[external_factors_analysis].[orders]' />
+          <map key='[orders (hourly_operations_analysis)]' value='[hourly_operations_analysis].[orders]' />
+          <map key='[orders]' value='[city_performance_analysis].[orders]' />
+          <map key='[orders_per_rider (city_performance_analysis)]' value='[city_performance_analysis].[orders_per_rider]' />
+          <map key='[orders_per_rider (daily_operations_kpi)]' value='[daily_operations_kpi].[orders_per_rider]' />
+          <map key='[orders_per_rider]' value='[operations_summary_for_tableau].[orders_per_rider]' />
+          <map key='[performance_score]' value='[rider_performance_analysis].[performance_score]' />
+          <map key='[primary_vehicle_type]' value='[rider_performance_analysis].[primary_vehicle_type]' />
+          <map key='[problem_score]' value='[problem_hotspot_analysis].[problem_score]' />
+          <map key='[problematic_cities]' value='[anomaly_monitoring].[problematic_cities]' />
+          <map key='[problematic_hours]' value='[anomaly_monitoring].[problematic_hours]' />
+          <map key='[problematic_riders]' value='[anomaly_monitoring].[problematic_riders]' />
+          <map key='[restaurant_lat]' value='[problem_hotspot_analysis].[restaurant_lat]' />
+          <map key='[restaurant_lng]' value='[problem_hotspot_analysis].[restaurant_lng]' />
+          <map key='[rider_age]' value='[rider_performance_analysis].[rider_age]' />
+          <map key='[rider_count]' value='[operations_summary_for_tableau].[rider_count]' />
+          <map key='[rider_id]' value='[rider_performance_analysis].[rider_id]' />
+          <map key='[rider_rating]' value='[problem_hotspot_analysis].[rider_rating]' />
+          <map key='[riders]' value='[city_performance_analysis].[riders]' />
+          <map key='[severe_delay_rate]' value='[anomaly_monitoring].[severe_delay_rate]' />
+          <map key='[severe_delays]' value='[anomaly_monitoring].[severe_delays]' />
+          <map key='[snack_rate]' value='[city_performance_analysis].[snack_rate]' />
+          <map key='[time_impact_vs_ideal]' value='[external_factors_analysis].[time_impact_vs_ideal]' />
+          <map key='[time_period (hourly_operations_analysis)]' value='[hourly_operations_analysis].[time_period]' />
+          <map key='[time_period]' value='[operations_summary_for_tableau].[time_period]' />
+          <map key='[total_orders (rider_performance_analysis)]' value='[rider_performance_analysis].[total_orders]' />
+          <map key='[total_orders]' value='[daily_operations_kpi].[total_orders]' />
+          <map key='[traffic_density (external_factors_analysis)]' value='[external_factors_analysis].[traffic_density]' />
+          <map key='[traffic_density (problem_hotspot_analysis)]' value='[problem_hotspot_analysis].[traffic_density]' />
+          <map key='[traffic_density]' value='[operations_summary_for_tableau].[traffic_density]' />
+          <map key='[vehicle_type]' value='[operations_summary_for_tableau].[vehicle_type]' />
+          <map key='[weather (external_factors_analysis)]' value='[external_factors_analysis].[weather]' />
+          <map key='[weather (problem_hotspot_analysis)]' value='[problem_hotspot_analysis].[weather]' />
+          <map key='[weather]' value='[operations_summary_for_tableau].[weather]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>order_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[order_date]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>order_date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>city_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[city_type]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>city_type</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>time_period</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[time_period]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>time_period</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>5</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>weather</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[weather]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>weather</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>traffic_density</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[traffic_density]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>traffic_density</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_festival</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[is_festival]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>is_festival</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_volume</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[order_volume]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>order_volume</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rider_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[rider_count]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>rider_count</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_delivery_time</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[avg_delivery_time]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>avg_delivery_time</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>13</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_rating</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_rating]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>avg_rating</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>on_time_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[on_time_rate]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>on_time_rate</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>orders_per_rider</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[orders_per_rider]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>orders_per_rider</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>24</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[order_type]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>order_type</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>vehicle_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[vehicle_type]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>vehicle_type</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_multi_delivery</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_multi_delivery]</local-name>
+            <parent-name>[operations_summary_for_tableau]</parent-name>
+            <remote-alias>avg_multi_delivery</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[order_date (anomaly_monitoring)]</local-name>
+            <parent-name>[anomaly_monitoring]</parent-name>
+            <remote-alias>order_date</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+            <object-id>[anomaly_monitoring_B2A5824F96C44DD484083140E8212295]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>severe_delays</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[severe_delays]</local-name>
+            <parent-name>[anomaly_monitoring]</parent-name>
+            <remote-alias>severe_delays</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>23</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[anomaly_monitoring_B2A5824F96C44DD484083140E8212295]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>moderate_delays</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[moderate_delays]</local-name>
+            <parent-name>[anomaly_monitoring]</parent-name>
+            <remote-alias>moderate_delays</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>23</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[anomaly_monitoring_B2A5824F96C44DD484083140E8212295]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>severe_delay_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[severe_delay_rate]</local-name>
+            <parent-name>[anomaly_monitoring]</parent-name>
+            <remote-alias>severe_delay_rate</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[anomaly_monitoring_B2A5824F96C44DD484083140E8212295]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>low_rating_orders</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[low_rating_orders]</local-name>
+            <parent-name>[anomaly_monitoring]</parent-name>
+            <remote-alias>low_rating_orders</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>23</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[anomaly_monitoring_B2A5824F96C44DD484083140E8212295]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>low_rating_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[low_rating_rate]</local-name>
+            <parent-name>[anomaly_monitoring]</parent-name>
+            <remote-alias>low_rating_rate</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[anomaly_monitoring_B2A5824F96C44DD484083140E8212295]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>problematic_riders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[problematic_riders]</local-name>
+            <parent-name>[anomaly_monitoring]</parent-name>
+            <remote-alias>problematic_riders</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[anomaly_monitoring_B2A5824F96C44DD484083140E8212295]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>problematic_cities</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[problematic_cities]</local-name>
+            <parent-name>[anomaly_monitoring]</parent-name>
+            <remote-alias>problematic_cities</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[anomaly_monitoring_B2A5824F96C44DD484083140E8212295]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>problematic_hours</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[problematic_hours]</local-name>
+            <parent-name>[anomaly_monitoring]</parent-name>
+            <remote-alias>problematic_hours</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[anomaly_monitoring_B2A5824F96C44DD484083140E8212295]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>city_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[city_type (city_performance_analysis)]</local-name>
+            <parent-name>[city_performance_analysis]</parent-name>
+            <remote-alias>city_type</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <object-id>[city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[order_date (city_performance_analysis)]</local-name>
+            <parent-name>[city_performance_analysis]</parent-name>
+            <remote-alias>order_date</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+            <object-id>[city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[orders]</local-name>
+            <parent-name>[city_performance_analysis]</parent-name>
+            <remote-alias>orders</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>riders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[riders]</local-name>
+            <parent-name>[city_performance_analysis]</parent-name>
+            <remote-alias>riders</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_delivery_time</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[avg_delivery_time (city_performance_analysis)]</local-name>
+            <parent-name>[city_performance_analysis]</parent-name>
+            <remote-alias>avg_delivery_time</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>13</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_rating</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_rating (city_performance_analysis)]</local-name>
+            <parent-name>[city_performance_analysis]</parent-name>
+            <remote-alias>avg_rating</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>orders_per_rider</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[orders_per_rider (city_performance_analysis)]</local-name>
+            <parent-name>[city_performance_analysis]</parent-name>
+            <remote-alias>orders_per_rider</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>24</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>on_time_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[on_time_rate (city_performance_analysis)]</local-name>
+            <parent-name>[city_performance_analysis]</parent-name>
+            <remote-alias>on_time_rate</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>meal_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[meal_rate]</local-name>
+            <parent-name>[city_performance_analysis]</parent-name>
+            <remote-alias>meal_rate</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>snack_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[snack_rate]</local-name>
+            <parent-name>[city_performance_analysis]</parent-name>
+            <remote-alias>snack_rate</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>drinks_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[drinks_rate]</local-name>
+            <parent-name>[city_performance_analysis]</parent-name>
+            <remote-alias>drinks_rate</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>multi_delivery_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[multi_delivery_rate]</local-name>
+            <parent-name>[city_performance_analysis]</parent-name>
+            <remote-alias>multi_delivery_rate</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[order_date (daily_operations_kpi)]</local-name>
+            <parent-name>[daily_operations_kpi]</parent-name>
+            <remote-alias>order_date</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+            <object-id>[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_orders]</local-name>
+            <parent-name>[daily_operations_kpi]</parent-name>
+            <remote-alias>total_orders</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>active_riders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[active_riders]</local-name>
+            <parent-name>[daily_operations_kpi]</parent-name>
+            <remote-alias>active_riders</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_delivery_time</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[avg_delivery_time (daily_operations_kpi)]</local-name>
+            <parent-name>[daily_operations_kpi]</parent-name>
+            <remote-alias>avg_delivery_time</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>13</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_rider_rating</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_rider_rating]</local-name>
+            <parent-name>[daily_operations_kpi]</parent-name>
+            <remote-alias>avg_rider_rating</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>orders_per_rider</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[orders_per_rider (daily_operations_kpi)]</local-name>
+            <parent-name>[daily_operations_kpi]</parent-name>
+            <remote-alias>orders_per_rider</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>24</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>on_time_orders</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[on_time_orders]</local-name>
+            <parent-name>[daily_operations_kpi]</parent-name>
+            <remote-alias>on_time_orders</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>23</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>on_time_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[on_time_rate (daily_operations_kpi)]</local-name>
+            <parent-name>[daily_operations_kpi]</parent-name>
+            <remote-alias>on_time_rate</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>high_rating_orders</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[high_rating_orders]</local-name>
+            <parent-name>[daily_operations_kpi]</parent-name>
+            <remote-alias>high_rating_orders</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>23</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>high_rating_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[high_rating_rate]</local-name>
+            <parent-name>[daily_operations_kpi]</parent-name>
+            <remote-alias>high_rating_rate</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>delayed_orders</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[delayed_orders]</local-name>
+            <parent-name>[daily_operations_kpi]</parent-name>
+            <remote-alias>delayed_orders</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>23</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>delay_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[delay_rate]</local-name>
+            <parent-name>[daily_operations_kpi]</parent-name>
+            <remote-alias>delay_rate</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_festival_day</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[is_festival_day]</local-name>
+            <parent-name>[daily_operations_kpi]</parent-name>
+            <remote-alias>is_festival_day</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <object-id>[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>weather</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[weather (external_factors_analysis)]</local-name>
+            <parent-name>[external_factors_analysis]</parent-name>
+            <remote-alias>weather</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <object-id>[external_factors_analysis_3FECC1B9C40643039B36845D914DA726]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>traffic_density</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[traffic_density (external_factors_analysis)]</local-name>
+            <parent-name>[external_factors_analysis]</parent-name>
+            <remote-alias>traffic_density</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <object-id>[external_factors_analysis_3FECC1B9C40643039B36845D914DA726]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[order_date (external_factors_analysis)]</local-name>
+            <parent-name>[external_factors_analysis]</parent-name>
+            <remote-alias>order_date</remote-alias>
+            <ordinal>55</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+            <object-id>[external_factors_analysis_3FECC1B9C40643039B36845D914DA726]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[orders (external_factors_analysis)]</local-name>
+            <parent-name>[external_factors_analysis]</parent-name>
+            <remote-alias>orders</remote-alias>
+            <ordinal>56</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[external_factors_analysis_3FECC1B9C40643039B36845D914DA726]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_delivery_time</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[avg_delivery_time (external_factors_analysis)]</local-name>
+            <parent-name>[external_factors_analysis]</parent-name>
+            <remote-alias>avg_delivery_time</remote-alias>
+            <ordinal>57</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>13</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[external_factors_analysis_3FECC1B9C40643039B36845D914DA726]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_rating</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_rating (external_factors_analysis)]</local-name>
+            <parent-name>[external_factors_analysis]</parent-name>
+            <remote-alias>avg_rating</remote-alias>
+            <ordinal>58</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[external_factors_analysis_3FECC1B9C40643039B36845D914DA726]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>on_time_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[on_time_rate (external_factors_analysis)]</local-name>
+            <parent-name>[external_factors_analysis]</parent-name>
+            <remote-alias>on_time_rate</remote-alias>
+            <ordinal>59</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[external_factors_analysis_3FECC1B9C40643039B36845D914DA726]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>time_impact_vs_ideal</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[time_impact_vs_ideal]</local-name>
+            <parent-name>[external_factors_analysis]</parent-name>
+            <remote-alias>time_impact_vs_ideal</remote-alias>
+            <ordinal>60</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>14</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[external_factors_analysis_3FECC1B9C40643039B36845D914DA726]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>motorcycle_usage_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[motorcycle_usage_rate]</local-name>
+            <parent-name>[external_factors_analysis]</parent-name>
+            <remote-alias>motorcycle_usage_rate</remote-alias>
+            <ordinal>61</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[external_factors_analysis_3FECC1B9C40643039B36845D914DA726]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_hour</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[order_hour]</local-name>
+            <parent-name>[hourly_operations_analysis]</parent-name>
+            <remote-alias>order_hour</remote-alias>
+            <ordinal>63</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <object-id>[hourly_operations_analysis_6768D4C635AB479FAB1E5E9F451E59C6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>time_period</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[time_period (hourly_operations_analysis)]</local-name>
+            <parent-name>[hourly_operations_analysis]</parent-name>
+            <remote-alias>time_period</remote-alias>
+            <ordinal>64</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>9</width>
+            <contains-null>false</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[hourly_operations_analysis_6768D4C635AB479FAB1E5E9F451E59C6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[order_date (hourly_operations_analysis)]</local-name>
+            <parent-name>[hourly_operations_analysis]</parent-name>
+            <remote-alias>order_date</remote-alias>
+            <ordinal>65</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+            <object-id>[hourly_operations_analysis_6768D4C635AB479FAB1E5E9F451E59C6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[orders (hourly_operations_analysis)]</local-name>
+            <parent-name>[hourly_operations_analysis]</parent-name>
+            <remote-alias>orders</remote-alias>
+            <ordinal>66</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[hourly_operations_analysis_6768D4C635AB479FAB1E5E9F451E59C6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>active_riders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[active_riders (hourly_operations_analysis)]</local-name>
+            <parent-name>[hourly_operations_analysis]</parent-name>
+            <remote-alias>active_riders</remote-alias>
+            <ordinal>67</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[hourly_operations_analysis_6768D4C635AB479FAB1E5E9F451E59C6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_delivery_time</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[avg_delivery_time (hourly_operations_analysis)]</local-name>
+            <parent-name>[hourly_operations_analysis]</parent-name>
+            <remote-alias>avg_delivery_time</remote-alias>
+            <ordinal>68</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>13</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[hourly_operations_analysis_6768D4C635AB479FAB1E5E9F451E59C6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_rating</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_rating (hourly_operations_analysis)]</local-name>
+            <parent-name>[hourly_operations_analysis]</parent-name>
+            <remote-alias>avg_rating</remote-alias>
+            <ordinal>69</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[hourly_operations_analysis_6768D4C635AB479FAB1E5E9F451E59C6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>on_time_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[on_time_rate (hourly_operations_analysis)]</local-name>
+            <parent-name>[hourly_operations_analysis]</parent-name>
+            <remote-alias>on_time_rate</remote-alias>
+            <ordinal>70</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[hourly_operations_analysis_6768D4C635AB479FAB1E5E9F451E59C6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>delivery_time_vs_daily_avg</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[delivery_time_vs_daily_avg]</local-name>
+            <parent-name>[hourly_operations_analysis]</parent-name>
+            <remote-alias>delivery_time_vs_daily_avg</remote-alias>
+            <ordinal>71</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>14</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[hourly_operations_analysis_6768D4C635AB479FAB1E5E9F451E59C6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>delivery_lat</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[delivery_lat]</local-name>
+            <parent-name>[problem_hotspot_analysis]</parent-name>
+            <remote-alias>delivery_lat</remote-alias>
+            <ordinal>73</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[problem_hotspot_analysis_0EA4B5D1D27349A19C3934EF7CD4A15B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>delivery_lng</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[delivery_lng]</local-name>
+            <parent-name>[problem_hotspot_analysis]</parent-name>
+            <remote-alias>delivery_lng</remote-alias>
+            <ordinal>74</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[problem_hotspot_analysis_0EA4B5D1D27349A19C3934EF7CD4A15B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>restaurant_lat</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[restaurant_lat]</local-name>
+            <parent-name>[problem_hotspot_analysis]</parent-name>
+            <remote-alias>restaurant_lat</remote-alias>
+            <ordinal>75</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[problem_hotspot_analysis_0EA4B5D1D27349A19C3934EF7CD4A15B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>restaurant_lng</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[restaurant_lng]</local-name>
+            <parent-name>[problem_hotspot_analysis]</parent-name>
+            <remote-alias>restaurant_lng</remote-alias>
+            <ordinal>76</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[problem_hotspot_analysis_0EA4B5D1D27349A19C3934EF7CD4A15B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>city_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[city_type (problem_hotspot_analysis)]</local-name>
+            <parent-name>[problem_hotspot_analysis]</parent-name>
+            <remote-alias>city_type</remote-alias>
+            <ordinal>77</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <object-id>[problem_hotspot_analysis_0EA4B5D1D27349A19C3934EF7CD4A15B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[order_date (problem_hotspot_analysis)]</local-name>
+            <parent-name>[problem_hotspot_analysis]</parent-name>
+            <remote-alias>order_date</remote-alias>
+            <ordinal>78</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+            <object-id>[problem_hotspot_analysis_0EA4B5D1D27349A19C3934EF7CD4A15B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>delivery_time</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[delivery_time]</local-name>
+            <parent-name>[problem_hotspot_analysis]</parent-name>
+            <remote-alias>delivery_time</remote-alias>
+            <ordinal>79</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <object-id>[problem_hotspot_analysis_0EA4B5D1D27349A19C3934EF7CD4A15B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rider_rating</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rider_rating]</local-name>
+            <parent-name>[problem_hotspot_analysis]</parent-name>
+            <remote-alias>rider_rating</remote-alias>
+            <ordinal>80</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[problem_hotspot_analysis_0EA4B5D1D27349A19C3934EF7CD4A15B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>traffic_density</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[traffic_density (problem_hotspot_analysis)]</local-name>
+            <parent-name>[problem_hotspot_analysis]</parent-name>
+            <remote-alias>traffic_density</remote-alias>
+            <ordinal>81</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <object-id>[problem_hotspot_analysis_0EA4B5D1D27349A19C3934EF7CD4A15B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>weather</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[weather (problem_hotspot_analysis)]</local-name>
+            <parent-name>[problem_hotspot_analysis]</parent-name>
+            <remote-alias>weather</remote-alias>
+            <ordinal>82</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <object-id>[problem_hotspot_analysis_0EA4B5D1D27349A19C3934EF7CD4A15B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_overtime</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[is_overtime]</local-name>
+            <parent-name>[problem_hotspot_analysis]</parent-name>
+            <remote-alias>is_overtime</remote-alias>
+            <ordinal>83</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[problem_hotspot_analysis_0EA4B5D1D27349A19C3934EF7CD4A15B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_low_rating</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[is_low_rating]</local-name>
+            <parent-name>[problem_hotspot_analysis]</parent-name>
+            <remote-alias>is_low_rating</remote-alias>
+            <ordinal>84</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[problem_hotspot_analysis_0EA4B5D1D27349A19C3934EF7CD4A15B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_severe_delay</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[is_severe_delay]</local-name>
+            <parent-name>[problem_hotspot_analysis]</parent-name>
+            <remote-alias>is_severe_delay</remote-alias>
+            <ordinal>85</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[problem_hotspot_analysis_0EA4B5D1D27349A19C3934EF7CD4A15B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>problem_score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[problem_score]</local-name>
+            <parent-name>[problem_hotspot_analysis]</parent-name>
+            <remote-alias>problem_score</remote-alias>
+            <ordinal>86</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[problem_hotspot_analysis_0EA4B5D1D27349A19C3934EF7CD4A15B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rider_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[rider_id]</local-name>
+            <parent-name>[rider_performance_analysis]</parent-name>
+            <remote-alias>rider_id</remote-alias>
+            <ordinal>88</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <object-id>[rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[order_date (rider_performance_analysis)]</local-name>
+            <parent-name>[rider_performance_analysis]</parent-name>
+            <remote-alias>order_date</remote-alias>
+            <ordinal>89</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+            <object-id>[rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rider_age</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rider_age]</local-name>
+            <parent-name>[rider_performance_analysis]</parent-name>
+            <remote-alias>rider_age</remote-alias>
+            <ordinal>90</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_orders (rider_performance_analysis)]</local-name>
+            <parent-name>[rider_performance_analysis]</parent-name>
+            <remote-alias>total_orders</remote-alias>
+            <ordinal>91</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <object-id>[rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_delivery_time</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[avg_delivery_time (rider_performance_analysis)]</local-name>
+            <parent-name>[rider_performance_analysis]</parent-name>
+            <remote-alias>avg_delivery_time</remote-alias>
+            <ordinal>92</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>13</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_rating</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_rating (rider_performance_analysis)]</local-name>
+            <parent-name>[rider_performance_analysis]</parent-name>
+            <remote-alias>avg_rating</remote-alias>
+            <ordinal>93</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>on_time_orders</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[on_time_orders (rider_performance_analysis)]</local-name>
+            <parent-name>[rider_performance_analysis]</parent-name>
+            <remote-alias>on_time_orders</remote-alias>
+            <ordinal>94</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>23</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>on_time_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[on_time_rate (rider_performance_analysis)]</local-name>
+            <parent-name>[rider_performance_analysis]</parent-name>
+            <remote-alias>on_time_rate</remote-alias>
+            <ordinal>95</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>29</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <object-id>[rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_multi_delivery</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_multi_delivery (rider_performance_analysis)]</local-name>
+            <parent-name>[rider_performance_analysis]</parent-name>
+            <remote-alias>avg_multi_delivery</remote-alias>
+            <ordinal>96</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>performance_score</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[performance_score]</local-name>
+            <parent-name>[rider_performance_analysis]</parent-name>
+            <remote-alias>performance_score</remote-alias>
+            <ordinal>97</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>primary_vehicle_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[primary_vehicle_type]</local-name>
+            <parent-name>[rider_performance_analysis]</parent-name>
+            <remote-alias>primary_vehicle_type</remote-alias>
+            <ordinal>98</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <object-id>[rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Weekday/Weekend' datatype='string' name='[Calculation_4282993640435703809]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF DATEPART(&apos;weekday&apos;,[order_date]) = 1 OR DATEPART(&apos;weekday&apos;,[order_date]) = 7 &#10;THEN &quot;weekend&quot; &#10;ELSE &quot;weekday&quot; &#10;END' />
+      </column>
+      <column caption='Day Type and Festival' datatype='string' name='[Calculation_4282993640691884035]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [is_festival] = 1 THEN &quot;Festival&quot;&#10;ELSEIF DATEPART(&apos;weekday&apos;,[order_date]) = 1 OR DATEPART(&apos;weekday&apos;,[order_date]) = 7 &#10;THEN &quot;Weekend&quot;&#10;ELSE &quot;Workday&quot;&#10;END' />
+      </column>
+      <column caption='Delivery Type' datatype='string' name='[Calculation_4282993640757125124]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [avg_multi_delivery (rider_performance_analysis)] &gt; 1&#10;THEN &quot;Multi Delivery&quot;&#10;ELSE &quot;Single Delivery&quot;&#10;END' />
+      </column>
+      <column caption='Total Orders Per Trip' datatype='real' name='[Calculation_4282993640767365127]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[avg_multi_delivery (rider_performance_analysis)] + 1' />
+      </column>
+      <column caption='Time Per Order' datatype='real' name='[Calculation_4282993640767438856]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[avg_delivery_time (rider_performance_analysis)] / ([avg_multi_delivery (rider_performance_analysis)] + 1)' />
+      </column>
+      <column caption='Orders Per Trip' datatype='string' name='[Calculation_4282993640768364554]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [avg_multi_delivery (rider_performance_analysis)] = 0 THEN &quot;Single (1 order)&quot;&#10;ELSEIF [avg_multi_delivery (rider_performance_analysis)] = 1 THEN &quot;Multi (2 orders)&quot;&#10;ELSEIF [avg_multi_delivery (rider_performance_analysis)] = 2 THEN &quot;Multi (3 orders)&quot;&#10;ELSE &quot;Multi (4+ orders)&quot;&#10;END' />
+      </column>
+      <column caption='Orders Per Hour' datatype='real' name='[Calculation_4282993640770781195]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([avg_multi_delivery (rider_performance_analysis)] + 1) / [avg_delivery_time (rider_performance_analysis)] * 60' />
+      </column>
+      <column caption='Overtime Rate' datatype='real' name='[Calculation_4282993640783917068]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF [avg_delivery_time (rider_performance_analysis)] &gt; 45 THEN 1 ELSE 0 END) / COUNT([total_orders (rider_performance_analysis)]) * 100' />
+      </column>
+      <column caption='Problem Level' datatype='string' name='[Calculation_4282993640800227344]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [problem_score] &gt;= 4 THEN &quot;Critical&quot;&#10;ELSEIF [problem_score] &gt;= 2 THEN &quot;High&quot;&#10;ELSEIF [problem_score] &gt;= 1 THEN &quot;Medium&quot;&#10;ELSE &quot;Low&quot;&#10;END' />
+      </column>
+      <column caption='anomaly_monitoring' datatype='table' name='[__tableau_internal_object_id__].[anomaly_monitoring_B2A5824F96C44DD484083140E8212295]' role='measure' type='quantitative' />
+      <column caption='city_performance_analysis' datatype='table' name='[__tableau_internal_object_id__].[city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8]' role='measure' type='quantitative' />
+      <column caption='daily_operations_kpi' datatype='table' name='[__tableau_internal_object_id__].[daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E]' role='measure' type='quantitative' />
+      <column caption='external_factors_analysis' datatype='table' name='[__tableau_internal_object_id__].[external_factors_analysis_3FECC1B9C40643039B36845D914DA726]' role='measure' type='quantitative' />
+      <column caption='hourly_operations_analysis' datatype='table' name='[__tableau_internal_object_id__].[hourly_operations_analysis_6768D4C635AB479FAB1E5E9F451E59C6]' role='measure' type='quantitative' />
+      <column caption='operations_summary_for_tableau' datatype='table' name='[__tableau_internal_object_id__].[operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907]' role='measure' type='quantitative' />
+      <column caption='problem_hotspot_analysis' datatype='table' name='[__tableau_internal_object_id__].[problem_hotspot_analysis_0EA4B5D1D27349A19C3934EF7CD4A15B]' role='measure' type='quantitative' />
+      <column caption='rider_performance_analysis' datatype='table' name='[__tableau_internal_object_id__].[rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A]' role='measure' type='quantitative' />
+      <column caption='Active Riders (Hourly Operations Analysis)' datatype='integer' name='[active_riders (hourly_operations_analysis)]' role='measure' type='quantitative' />
+      <column caption='Active Riders' datatype='integer' name='[active_riders]' role='measure' type='quantitative' />
+      <column caption='Avg Delivery Time (City Performance Analysis)' datatype='real' name='[avg_delivery_time (city_performance_analysis)]' role='measure' type='quantitative' />
+      <column caption='Avg Delivery Time (Daily Operations Kpi)' datatype='real' name='[avg_delivery_time (daily_operations_kpi)]' role='measure' type='quantitative' />
+      <column caption='Avg Delivery Time (External Factors Analysis)' datatype='real' name='[avg_delivery_time (external_factors_analysis)]' role='measure' type='quantitative' />
+      <column caption='Avg Delivery Time (Hourly Operations Analysis)' datatype='real' name='[avg_delivery_time (hourly_operations_analysis)]' role='measure' type='quantitative' />
+      <column caption='Avg Delivery Time (Rider Performance Analysis)' datatype='real' name='[avg_delivery_time (rider_performance_analysis)]' role='measure' type='quantitative' />
+      <column caption='Avg Delivery Time' datatype='real' name='[avg_delivery_time]' role='measure' type='quantitative' />
+      <column caption='Avg Multi Delivery (Rider Performance Analysis)' datatype='real' name='[avg_multi_delivery (rider_performance_analysis)]' role='measure' type='quantitative' />
+      <column caption='Avg Multi Delivery' datatype='real' name='[avg_multi_delivery]' role='measure' type='quantitative' />
+      <column caption='Avg Rating (City Performance Analysis)' datatype='real' name='[avg_rating (city_performance_analysis)]' role='measure' type='quantitative' />
+      <column caption='Avg Rating (External Factors Analysis)' datatype='real' name='[avg_rating (external_factors_analysis)]' role='measure' type='quantitative' />
+      <column caption='Avg Rating (Hourly Operations Analysis)' datatype='real' name='[avg_rating (hourly_operations_analysis)]' role='measure' type='quantitative' />
+      <column caption='Avg Rating (Rider Performance Analysis)' datatype='real' name='[avg_rating (rider_performance_analysis)]' role='measure' type='quantitative' />
+      <column caption='Avg Rating' datatype='real' name='[avg_rating]' role='measure' type='quantitative' />
+      <column caption='Avg Rider Rating' datatype='real' name='[avg_rider_rating]' role='measure' type='quantitative' />
+      <column caption='City Type (City Performance Analysis)' datatype='string' name='[city_type (city_performance_analysis)]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='City Type (Problem Hotspot Analysis)' datatype='string' name='[city_type (problem_hotspot_analysis)]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='City Type' datatype='string' name='[city_type]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Delay Rate' datatype='real' name='[delay_rate]' role='measure' type='quantitative' />
+      <column caption='Delayed Orders' datatype='real' name='[delayed_orders]' role='measure' type='quantitative' />
+      <column aggregation='Avg' caption='Delivery Lat' datatype='real' name='[delivery_lat]' role='dimension' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Sum' caption='Delivery Lng' datatype='real' name='[delivery_lng]' role='dimension' type='ordinal' />
+      <column caption='Delivery Time' datatype='integer' name='[delivery_time]' role='measure' type='quantitative' />
+      <column caption='Delivery Time Vs Daily Avg' datatype='real' name='[delivery_time_vs_daily_avg]' role='measure' type='quantitative' />
+      <column caption='Drinks Rate' datatype='real' name='[drinks_rate]' role='measure' type='quantitative' />
+      <column caption='High Rating Orders' datatype='real' name='[high_rating_orders]' role='measure' type='quantitative' />
+      <column caption='High Rating Rate' datatype='real' name='[high_rating_rate]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Is Festival' datatype='integer' name='[is_festival]' role='dimension' type='ordinal'>
+        <aliases>
+          <alias key='0' value='Regular Days' />
+          <alias key='1' value='Festival Days' />
+        </aliases>
+      </column>
+      <column caption='Is Festival Day' datatype='integer' name='[is_festival_day]' role='dimension' type='quantitative' />
+      <column caption='Is Low Rating' datatype='integer' name='[is_low_rating]' role='measure' type='quantitative' />
+      <column caption='Is Overtime' datatype='integer' name='[is_overtime]' role='measure' type='quantitative' />
+      <column caption='Is Severe Delay' datatype='integer' name='[is_severe_delay]' role='measure' type='quantitative' />
+      <column caption='Low Rating Orders' datatype='real' name='[low_rating_orders]' role='measure' type='quantitative' />
+      <column caption='Low Rating Rate' datatype='real' name='[low_rating_rate]' role='measure' type='quantitative' />
+      <column caption='Meal Rate' datatype='real' name='[meal_rate]' role='measure' type='quantitative' />
+      <column caption='Moderate Delays' datatype='real' name='[moderate_delays]' role='measure' type='quantitative' />
+      <column caption='Motorcycle Usage Rate' datatype='real' name='[motorcycle_usage_rate]' role='measure' type='quantitative' />
+      <column caption='Multi Delivery Rate' datatype='real' name='[multi_delivery_rate]' role='measure' type='quantitative' />
+      <column caption='On Time Orders (Rider Performance Analysis)' datatype='real' name='[on_time_orders (rider_performance_analysis)]' role='measure' type='quantitative' />
+      <column caption='On Time Orders' datatype='real' name='[on_time_orders]' role='measure' type='quantitative' />
+      <column caption='On Time Rate (City Performance Analysis)' datatype='real' name='[on_time_rate (city_performance_analysis)]' role='measure' type='quantitative' />
+      <column caption='On Time Rate (Daily Operations Kpi)' datatype='real' name='[on_time_rate (daily_operations_kpi)]' role='measure' type='quantitative' />
+      <column caption='On Time Rate (External Factors Analysis)' datatype='real' name='[on_time_rate (external_factors_analysis)]' role='measure' type='quantitative' />
+      <column caption='On Time Rate (Hourly Operations Analysis)' datatype='real' name='[on_time_rate (hourly_operations_analysis)]' role='measure' type='quantitative' />
+      <column caption='On Time Rate (Rider Performance Analysis)' datatype='real' name='[on_time_rate (rider_performance_analysis)]' role='measure' type='quantitative' />
+      <column caption='On Time Rate' datatype='real' name='[on_time_rate]' role='measure' type='quantitative' />
+      <column aggregation='Count' caption='Order Date (Anomaly Monitoring)' datatype='date' name='[order_date (anomaly_monitoring)]' role='dimension' type='ordinal' />
+      <column aggregation='Count' caption='Order Date (City Performance Analysis)' datatype='date' name='[order_date (city_performance_analysis)]' role='dimension' semantic-role='[City].[Name]' type='ordinal' />
+      <column caption='Order Date (Daily Operations Kpi)' datatype='date' name='[order_date (daily_operations_kpi)]' role='dimension' type='quantitative' />
+      <column caption='Order Date (External Factors Analysis)' datatype='date' name='[order_date (external_factors_analysis)]' role='dimension' type='ordinal' />
+      <column aggregation='Count' caption='Order Date (Hourly Operations Analysis)' datatype='date' name='[order_date (hourly_operations_analysis)]' role='dimension' type='ordinal' />
+      <column caption='Order Date (Problem Hotspot Analysis)' datatype='date' name='[order_date (problem_hotspot_analysis)]' role='dimension' type='ordinal' />
+      <column caption='Order Date (Rider Performance Analysis)' datatype='date' name='[order_date (rider_performance_analysis)]' role='dimension' type='ordinal' />
+      <column aggregation='Count' caption='Order Date' datatype='date' datatype-customized='true' name='[order_date]' role='dimension' type='ordinal' />
+      <column caption='Order Hour' datatype='integer' name='[order_hour]' role='measure' type='quantitative' />
+      <column caption='Order Type' datatype='string' name='[order_type]' role='dimension' type='nominal' />
+      <column caption='Order Volume' datatype='integer' name='[order_volume]' role='measure' type='quantitative' />
+      <column caption='Orders (External Factors Analysis)' datatype='integer' name='[orders (external_factors_analysis)]' role='measure' type='quantitative' />
+      <column caption='Orders (Hourly Operations Analysis)' datatype='integer' name='[orders (hourly_operations_analysis)]' role='measure' type='quantitative' />
+      <column caption='Orders' datatype='integer' name='[orders]' role='measure' type='quantitative' />
+      <column caption='Orders Per Rider (City Performance Analysis)' datatype='real' name='[orders_per_rider (city_performance_analysis)]' role='measure' type='quantitative' />
+      <column caption='Orders Per Rider (Daily Operations Kpi)' datatype='real' name='[orders_per_rider (daily_operations_kpi)]' role='measure' type='quantitative' />
+      <column caption='Orders Per Rider' datatype='real' name='[orders_per_rider]' role='measure' type='quantitative' />
+      <column caption='Performance Score' datatype='real' name='[performance_score]' role='measure' type='quantitative' />
+      <column caption='Primary Vehicle Type' datatype='string' name='[primary_vehicle_type]' role='dimension' type='nominal' />
+      <column caption='Problem Score' datatype='integer' name='[problem_score]' role='measure' type='quantitative' />
+      <column caption='Problematic Cities' datatype='integer' name='[problematic_cities]' role='measure' type='quantitative' />
+      <column caption='Problematic Hours' datatype='integer' name='[problematic_hours]' role='measure' type='quantitative' />
+      <column caption='Problematic Riders' datatype='integer' name='[problematic_riders]' role='measure' type='quantitative' />
+      <column aggregation='Avg' caption='Restaurant Lat' datatype='real' name='[restaurant_lat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column caption='Restaurant Lng' datatype='real' name='[restaurant_lng]' role='measure' type='quantitative' />
+      <column caption='Rider Age' datatype='real' name='[rider_age]' role='measure' type='quantitative' />
+      <column caption='Rider Count' datatype='integer' name='[rider_count]' role='measure' type='quantitative' />
+      <column caption='Rider Id' datatype='string' name='[rider_id]' role='dimension' type='nominal' />
+      <column caption='Rider Rating' datatype='real' name='[rider_rating]' role='measure' type='quantitative' />
+      <column caption='Riders' datatype='integer' name='[riders]' role='measure' type='quantitative' />
+      <column caption='Severe Delay Rate' datatype='real' name='[severe_delay_rate]' role='measure' type='quantitative' />
+      <column caption='Severe Delays' datatype='real' name='[severe_delays]' role='measure' type='quantitative' />
+      <column caption='Snack Rate' datatype='real' name='[snack_rate]' role='measure' type='quantitative' />
+      <column caption='Time Impact Vs Ideal' datatype='real' name='[time_impact_vs_ideal]' role='measure' type='quantitative' />
+      <column caption='Time Period (Hourly Operations Analysis)' datatype='string' name='[time_period (hourly_operations_analysis)]' role='dimension' type='nominal' />
+      <column caption='Time Period' datatype='string' name='[time_period]' role='dimension' type='nominal' />
+      <column caption='Total Orders (Rider Performance Analysis)' datatype='integer' name='[total_orders (rider_performance_analysis)]' role='measure' type='quantitative' />
+      <column caption='Total Orders' datatype='integer' name='[total_orders]' role='measure' type='quantitative' />
+      <column caption='Traffic Density (External Factors Analysis)' datatype='string' name='[traffic_density (external_factors_analysis)]' role='dimension' type='nominal' />
+      <column caption='Traffic Density (Problem Hotspot Analysis)' datatype='string' name='[traffic_density (problem_hotspot_analysis)]' role='dimension' type='nominal' />
+      <column caption='Traffic Density' datatype='string' name='[traffic_density]' role='dimension' type='nominal' />
+      <column caption='Vehicle Type' datatype='string' name='[vehicle_type]' role='dimension' type='nominal' />
+      <column caption='Weather (External Factors Analysis)' datatype='string' name='[weather (external_factors_analysis)]' role='dimension' type='nominal' />
+      <column caption='Weather (Problem Hotspot Analysis)' datatype='string' name='[weather (problem_hotspot_analysis)]' role='dimension' type='nominal' />
+      <column caption='Weather' datatype='string' name='[weather]' role='dimension' type='nominal' />
+      <column-instance column='[Calculation_4282993640435703809]' derivation='None' name='[none:Calculation_4282993640435703809:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_4282993640691884035]' derivation='None' name='[none:Calculation_4282993640691884035:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_4282993640757125124]' derivation='None' name='[none:Calculation_4282993640757125124:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_4282993640768364554]' derivation='None' name='[none:Calculation_4282993640768364554:nk]' pivot='key' type='nominal' />
+      <column-instance column='[city_type (city_performance_analysis)]' derivation='None' name='[none:city_type (city_performance_analysis):nk]' pivot='key' type='nominal' />
+      <column-instance column='[city_type]' derivation='None' name='[none:city_type:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Calculation_4282993640435703809:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;weekday&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;weekend&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:city_type (city_performance_analysis):nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Semi_Urban&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Urban&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;NaN&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Metropolitan&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_4282993640691884035:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Festival&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Workday&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Weekend&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Weekday&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:city_type:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Semi_Urban&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Urban&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;NaN&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Metropolitan&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_4282993640757125124:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Multi Delivery&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Single Delivery&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_4282993640768364554:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Multi (2 orders)&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Single (1 order)&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Multi (4+ orders)&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Multi (3 orders)&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='anomaly_monitoring' id='anomaly_monitoring_B2A5824F96C44DD484083140E8212295'>
+            <properties context=''>
+              <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='anomaly_monitoring' table='[anomaly_monitoring]' type='table' />
+            </properties>
+          </object>
+          <object caption='city_performance_analysis' id='city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8'>
+            <properties context=''>
+              <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='city_performance_analysis' table='[city_performance_analysis]' type='table' />
+            </properties>
+          </object>
+          <object caption='daily_operations_kpi' id='daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E'>
+            <properties context=''>
+              <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='daily_operations_kpi' table='[daily_operations_kpi]' type='table' />
+            </properties>
+          </object>
+          <object caption='external_factors_analysis' id='external_factors_analysis_3FECC1B9C40643039B36845D914DA726'>
+            <properties context=''>
+              <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='external_factors_analysis' table='[external_factors_analysis]' type='table' />
+            </properties>
+          </object>
+          <object caption='hourly_operations_analysis' id='hourly_operations_analysis_6768D4C635AB479FAB1E5E9F451E59C6'>
+            <properties context=''>
+              <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='hourly_operations_analysis' table='[hourly_operations_analysis]' type='table' />
+            </properties>
+          </object>
+          <object caption='operations_summary_for_tableau' id='operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907'>
+            <properties context=''>
+              <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='operations_summary_for_tableau' table='[operations_summary_for_tableau]' type='table'>
+                <columns>
+                  <column datatype='date' date-parse-format='yyyy-MM-dd' name='order_date' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='problem_hotspot_analysis' id='problem_hotspot_analysis_0EA4B5D1D27349A19C3934EF7CD4A15B'>
+            <properties context=''>
+              <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='problem_hotspot_analysis' table='[problem_hotspot_analysis]' type='table' />
+            </properties>
+          </object>
+          <object caption='rider_performance_analysis' id='rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A'>
+            <properties context=''>
+              <relation connection='mysql.139dkf00wdzz1518eee4c1k4ceg7' name='rider_performance_analysis' table='[rider_performance_analysis]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[order_date]' />
+              <expression op='[order_date (anomaly_monitoring)]' />
+            </expression>
+            <first-end-point object-id='operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907' />
+            <second-end-point object-id='anomaly_monitoring_B2A5824F96C44DD484083140E8212295' />
+          </relationship>
+          <relationship>
+            <expression op='AND'>
+              <expression op='='>
+                <expression op='[order_date]' />
+                <expression op='[order_date (city_performance_analysis)]' />
+              </expression>
+              <expression op='='>
+                <expression op='[city_type]' />
+                <expression op='[city_type (city_performance_analysis)]' />
+              </expression>
+            </expression>
+            <first-end-point object-id='operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907' />
+            <second-end-point object-id='city_performance_analysis_D1BAD5A5DDA043A9A82F9B955C11A2D8' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[order_date]' />
+              <expression op='[order_date (daily_operations_kpi)]' />
+            </expression>
+            <first-end-point object-id='operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907' />
+            <second-end-point object-id='daily_operations_kpi_7A5A97A581F9490593BABE8E61BD981E' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[order_date]' />
+              <expression op='[order_date (external_factors_analysis)]' />
+            </expression>
+            <first-end-point object-id='operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907' />
+            <second-end-point object-id='external_factors_analysis_3FECC1B9C40643039B36845D914DA726' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[order_date]' />
+              <expression op='[order_date (hourly_operations_analysis)]' />
+            </expression>
+            <first-end-point object-id='operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907' />
+            <second-end-point object-id='hourly_operations_analysis_6768D4C635AB479FAB1E5E9F451E59C6' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[order_date]' />
+              <expression op='[order_date (problem_hotspot_analysis)]' />
+            </expression>
+            <first-end-point object-id='operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907' />
+            <second-end-point object-id='problem_hotspot_analysis_0EA4B5D1D27349A19C3934EF7CD4A15B' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[order_date]' />
+              <expression op='[order_date (rider_performance_analysis)]' />
+            </expression>
+            <first-end-point object-id='operations_summary_for_tableau_51F10FE58A024FA491C79078A1A28907' />
+            <second-end-point object-id='rider_performance_analysis_A1C93E5E7F00462A9C2528D4FEA5AB4A' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <shared-views>
+    <shared-view name='federated.17oquoq0d9mupt1844s1818be3pb'>
+      <datasources>
+        <datasource caption='operations_summary_for_tableau+ (food_delivery)' name='federated.17oquoq0d9mupt1844s1818be3pb' />
+      </datasources>
+      <datasource-dependencies datasource='federated.17oquoq0d9mupt1844s1818be3pb'>
+        <column caption='City Type' datatype='string' name='[city_type]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+        <column aggregation='Sum' caption='Is Festival' datatype='integer' name='[is_festival]' role='dimension' type='ordinal'>
+          <aliases>
+            <alias key='0' value='Regular Days' />
+            <alias key='1' value='Festival Days' />
+          </aliases>
+        </column>
+        <column-instance column='[city_type]' derivation='None' name='[none:city_type:nk]' pivot='key' type='nominal' />
+        <column-instance column='[is_festival]' derivation='None' name='[none:is_festival:ok]' pivot='key' type='ordinal' />
+        <column-instance column='[order_date]' derivation='None' name='[none:order_date:qk]' pivot='key' type='quantitative' />
+        <column aggregation='Count' caption='Order Date' datatype='date' datatype-customized='true' name='[order_date]' role='dimension' type='ordinal' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.17oquoq0d9mupt1844s1818be3pb].[none:city_type:nk]'>
+        <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+          <groupfilter function='member' level='[none:city_type:nk]' member='&quot;Metropolitan&quot;' />
+          <groupfilter function='member' level='[none:city_type:nk]' member='&quot;Semi_Urban&quot;' />
+          <groupfilter function='member' level='[none:city_type:nk]' member='&quot;Urban&quot;' />
+        </groupfilter>
+      </filter>
+      <filter class='categorical' column='[federated.17oquoq0d9mupt1844s1818be3pb].[none:is_festival:ok]'>
+        <groupfilter function='level-members' level='[none:is_festival:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+      </filter>
+      <filter class='quantitative' column='[federated.17oquoq0d9mupt1844s1818be3pb].[none:order_date:qk]' included-values='in-range'>
+        <min>#2022-02-11#</min>
+        <max>#2022-04-06#</max>
+      </filter>
+    </shared-view>
+  </shared-views>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1_B3D872E06D8D4F7F8839B8EBC17CE2DF]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Daily Order Trend by City Type' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='City Type (City Performance Analysis)' />
+        <param name='target' value='Daily Order Trend by City Type' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Daily Order Trend by City Type'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='operations_summary_for_tableau+ (food_delivery)' name='federated.17oquoq0d9mupt1844s1818be3pb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.17oquoq0d9mupt1844s1818be3pb'>
+            <column-instance column='[total_orders]' derivation='Avg' name='[avg:total_orders:qk]' pivot='key' type='quantitative' />
+            <column caption='City Type (City Performance Analysis)' datatype='string' name='[city_type (city_performance_analysis)]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column caption='City Type' datatype='string' name='[city_type]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column aggregation='Sum' caption='Is Festival' datatype='integer' name='[is_festival]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Regular Days' />
+                <alias key='1' value='Festival Days' />
+              </aliases>
+            </column>
+            <column-instance column='[city_type (city_performance_analysis)]' derivation='None' name='[none:city_type (city_performance_analysis):nk]' pivot='key' type='nominal' />
+            <column-instance column='[city_type]' derivation='None' name='[none:city_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[is_festival]' derivation='None' name='[none:is_festival:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[order_date]' derivation='None' name='[none:order_date:qk]' pivot='key' type='quantitative' />
+            <column caption='Order Date (Daily Operations Kpi)' datatype='date' name='[order_date (daily_operations_kpi)]' role='dimension' type='quantitative' />
+            <column aggregation='Count' caption='Order Date' datatype='date' datatype-customized='true' name='[order_date]' role='dimension' type='ordinal' />
+            <column-instance column='[order_date (daily_operations_kpi)]' derivation='Day-Trunc' name='[tdy:order_date (daily_operations_kpi):qk]' pivot='key' type='quantitative' />
+            <column caption='Total Orders' datatype='integer' name='[total_orders]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:city_type:nk]</column>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:is_festival:ok]</column>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:order_date:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' domain-expand='false' field='[federated.17oquoq0d9mupt1844s1818be3pb].[avg:total_orders:qk]' field-type='quantitative' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='fill-above' id='refline1' value='#00000000' />
+            <format attr='fill-below' id='refline1' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.17oquoq0d9mupt1844s1818be3pb].[none:city_type (city_performance_analysis):nk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='142' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.17oquoq0d9mupt1844s1818be3pb].[avg:total_orders:qk]</rows>
+        <cols>[federated.17oquoq0d9mupt1844s1818be3pb].[tdy:order_date (daily_operations_kpi):qk]</cols>
+      </table>
+      <simple-id uuid='{73CA36E3-FCEB-4873-9B17-D2FB2D0697CE}' />
+    </worksheet>
+    <worksheet name='Daily Order Trend by Day Type'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='operations_summary_for_tableau+ (food_delivery)' name='federated.17oquoq0d9mupt1844s1818be3pb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.17oquoq0d9mupt1844s1818be3pb'>
+            <column caption='Day Type and Festival' datatype='string' name='[Calculation_4282993640691884035]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [is_festival] = 1 THEN &quot;Festival&quot;&#10;ELSEIF DATEPART(&apos;weekday&apos;,[order_date]) = 1 OR DATEPART(&apos;weekday&apos;,[order_date]) = 7 &#10;THEN &quot;Weekend&quot;&#10;ELSE &quot;Workday&quot;&#10;END' />
+            </column>
+            <column-instance column='[total_orders]' derivation='Avg' name='[avg:total_orders:qk]' pivot='key' type='quantitative' />
+            <column caption='City Type' datatype='string' name='[city_type]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column aggregation='Sum' caption='Is Festival' datatype='integer' name='[is_festival]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Regular Days' />
+                <alias key='1' value='Festival Days' />
+              </aliases>
+            </column>
+            <column-instance column='[Calculation_4282993640691884035]' derivation='None' name='[none:Calculation_4282993640691884035:nk]' pivot='key' type='nominal' />
+            <column-instance column='[city_type]' derivation='None' name='[none:city_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[is_festival]' derivation='None' name='[none:is_festival:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[order_date]' derivation='None' name='[none:order_date:qk]' pivot='key' type='quantitative' />
+            <column caption='Order Date (Daily Operations Kpi)' datatype='date' name='[order_date (daily_operations_kpi)]' role='dimension' type='quantitative' />
+            <column aggregation='Count' caption='Order Date' datatype='date' datatype-customized='true' name='[order_date]' role='dimension' type='ordinal' />
+            <column-instance column='[order_date (daily_operations_kpi)]' derivation='Day-Trunc' name='[tdy:order_date (daily_operations_kpi):qk]' pivot='key' type='quantitative' />
+            <column caption='Total Orders' datatype='integer' name='[total_orders]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:city_type:nk]</column>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:is_festival:ok]</column>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:order_date:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' domain-expand='false' field='[federated.17oquoq0d9mupt1844s1818be3pb].[avg:total_orders:qk]' field-type='quantitative' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='fill-above' id='refline1' value='#00000000' />
+            <format attr='fill-below' id='refline1' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.17oquoq0d9mupt1844s1818be3pb].[none:Calculation_4282993640691884035:nk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+          </pane>
+        </panes>
+        <rows>[federated.17oquoq0d9mupt1844s1818be3pb].[avg:total_orders:qk]</rows>
+        <cols>[federated.17oquoq0d9mupt1844s1818be3pb].[tdy:order_date (daily_operations_kpi):qk]</cols>
+      </table>
+      <simple-id uuid='{6611E0C1-D79B-4ADC-B4BE-DE30A0835984}' />
+    </worksheet>
+    <worksheet name='KPI Overview'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='operations_summary_for_tableau+ (food_delivery)' name='federated.17oquoq0d9mupt1844s1818be3pb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.17oquoq0d9mupt1844s1818be3pb'>
+            <column caption='Active Riders' datatype='integer' name='[active_riders]' role='measure' type='quantitative' />
+            <column-instance column='[avg_delivery_time (daily_operations_kpi)]' derivation='Avg' name='[avg:avg_delivery_time (daily_operations_kpi):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[on_time_rate (daily_operations_kpi)]' derivation='Avg' name='[avg:on_time_rate (daily_operations_kpi):qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Delivery Time (Daily Operations Kpi)' datatype='real' name='[avg_delivery_time (daily_operations_kpi)]' role='measure' type='quantitative' />
+            <column caption='City Type' datatype='string' name='[city_type]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column aggregation='Sum' caption='Is Festival' datatype='integer' name='[is_festival]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Regular Days' />
+                <alias key='1' value='Festival Days' />
+              </aliases>
+            </column>
+            <column-instance column='[city_type]' derivation='None' name='[none:city_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[is_festival]' derivation='None' name='[none:is_festival:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[order_date]' derivation='None' name='[none:order_date:qk]' pivot='key' type='quantitative' />
+            <column caption='On Time Rate (Daily Operations Kpi)' datatype='real' name='[on_time_rate (daily_operations_kpi)]' role='measure' type='quantitative' />
+            <column aggregation='Count' caption='Order Date' datatype='date' datatype-customized='true' name='[order_date]' role='dimension' type='ordinal' />
+            <column-instance column='[active_riders]' derivation='Sum' name='[sum:active_riders:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_orders]' derivation='Sum' name='[sum:total_orders:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Orders' datatype='integer' name='[total_orders]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:order_date:qk]</column>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:city_type:nk]</column>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:is_festival:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.17oquoq0d9mupt1844s1818be3pb].[avg:on_time_rate (daily_operations_kpi):qk]' value='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.17oquoq0d9mupt1844s1818be3pb].[sum:total_orders:qk]' />
+              <text column='[federated.17oquoq0d9mupt1844s1818be3pb].[avg:on_time_rate (daily_operations_kpi):qk]' />
+              <text column='[federated.17oquoq0d9mupt1844s1818be3pb].[avg:avg_delivery_time (daily_operations_kpi):qk]' />
+              <text column='[federated.17oquoq0d9mupt1844s1818be3pb].[sum:active_riders:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontalignment='0' fontcolor='#4e79a7' fontsize='12'><![CDATA[Total Orders:  <[federated.17oquoq0d9mupt1844s1818be3pb].[sum:total_orders:qk]>]]></run>
+                <run fontalignment='0'>Æ&#10;</run>
+                <run fontalignment='0' fontcolor='#4e79a7' fontsize='12'><![CDATA[On Time Rate:  <[federated.17oquoq0d9mupt1844s1818be3pb].[avg:on_time_rate (daily_operations_kpi):qk]>]]></run>
+                <run fontalignment='0'>Æ&#10;</run>
+                <run fontalignment='0' fontcolor='#4e79a7' fontsize='12'><![CDATA[Avg Delivery Time (min):  <[federated.17oquoq0d9mupt1844s1818be3pb].[avg:avg_delivery_time (daily_operations_kpi):qk]>]]></run>
+                <run fontalignment='0'>Æ&#10;</run>
+                <run fontalignment='0' fontcolor='#4e79a7' fontsize='12'><![CDATA[Active Riders:   <[federated.17oquoq0d9mupt1844s1818be3pb].[sum:active_riders:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{258C8773-365B-46F0-87C0-C675E48F6320}' />
+    </worksheet>
+    <worksheet name='On-time Rate'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='operations_summary_for_tableau+ (food_delivery)' name='federated.17oquoq0d9mupt1844s1818be3pb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.17oquoq0d9mupt1844s1818be3pb'>
+            <column-instance column='[on_time_rate (daily_operations_kpi)]' derivation='Avg' name='[avg:on_time_rate (daily_operations_kpi):qk]' pivot='key' type='quantitative' />
+            <column caption='City Type' datatype='string' name='[city_type]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column aggregation='Sum' caption='Is Festival' datatype='integer' name='[is_festival]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Regular Days' />
+                <alias key='1' value='Festival Days' />
+              </aliases>
+            </column>
+            <column-instance column='[city_type]' derivation='None' name='[none:city_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[is_festival]' derivation='None' name='[none:is_festival:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[order_date]' derivation='None' name='[none:order_date:qk]' pivot='key' type='quantitative' />
+            <column caption='On Time Rate (Daily Operations Kpi)' datatype='real' name='[on_time_rate (daily_operations_kpi)]' role='measure' type='quantitative' />
+            <column caption='Order Date (Daily Operations Kpi)' datatype='date' name='[order_date (daily_operations_kpi)]' role='dimension' type='quantitative' />
+            <column aggregation='Count' caption='Order Date' datatype='date' datatype-customized='true' name='[order_date]' role='dimension' type='ordinal' />
+            <column-instance column='[order_date (daily_operations_kpi)]' derivation='Day-Trunc' name='[tdy:order_date (daily_operations_kpi):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:city_type:nk]</column>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:is_festival:ok]</column>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:order_date:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' domain-expand='false' field='[federated.17oquoq0d9mupt1844s1818be3pb].[avg:on_time_rate (daily_operations_kpi):qk]' field-type='quantitative' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.17oquoq0d9mupt1844s1818be3pb].[avg:on_time_rate (daily_operations_kpi):qk]' value='c#,##0&quot;%&quot;' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.17oquoq0d9mupt1844s1818be3pb].[none:city_type:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='139' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.17oquoq0d9mupt1844s1818be3pb].[none:city_type:nk] * [federated.17oquoq0d9mupt1844s1818be3pb].[avg:on_time_rate (daily_operations_kpi):qk])</rows>
+        <cols>[federated.17oquoq0d9mupt1844s1818be3pb].[tdy:order_date (daily_operations_kpi):qk]</cols>
+      </table>
+      <simple-id uuid='{811A0142-746F-4871-A266-0403AD3D7C61}' />
+    </worksheet>
+    <worksheet name='Orders Per Hour'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run><![CDATA[Delivery Efficiency: <Sheet Name>]]></run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='operations_summary_for_tableau+ (food_delivery)' name='federated.17oquoq0d9mupt1844s1818be3pb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.17oquoq0d9mupt1844s1818be3pb'>
+            <column caption='Orders Per Trip' datatype='string' name='[Calculation_4282993640768364554]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [avg_multi_delivery (rider_performance_analysis)] = 0 THEN &quot;Single (1 order)&quot;&#10;ELSEIF [avg_multi_delivery (rider_performance_analysis)] = 1 THEN &quot;Multi (2 orders)&quot;&#10;ELSEIF [avg_multi_delivery (rider_performance_analysis)] = 2 THEN &quot;Multi (3 orders)&quot;&#10;ELSE &quot;Multi (4+ orders)&quot;&#10;END' />
+            </column>
+            <column caption='Orders Per Hour' datatype='real' name='[Calculation_4282993640770781195]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='([avg_multi_delivery (rider_performance_analysis)] + 1) / [avg_delivery_time (rider_performance_analysis)] * 60' />
+            </column>
+            <column-instance column='[Calculation_4282993640770781195]' derivation='Avg' name='[avg:Calculation_4282993640770781195:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Delivery Time (Rider Performance Analysis)' datatype='real' name='[avg_delivery_time (rider_performance_analysis)]' role='measure' type='quantitative' />
+            <column caption='Avg Multi Delivery (Rider Performance Analysis)' datatype='real' name='[avg_multi_delivery (rider_performance_analysis)]' role='measure' type='quantitative' />
+            <column caption='City Type' datatype='string' name='[city_type]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column aggregation='Sum' caption='Is Festival' datatype='integer' name='[is_festival]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Regular Days' />
+                <alias key='1' value='Festival Days' />
+              </aliases>
+            </column>
+            <column-instance column='[Calculation_4282993640768364554]' derivation='None' name='[none:Calculation_4282993640768364554:nk]' pivot='key' type='nominal' />
+            <column-instance column='[city_type]' derivation='None' name='[none:city_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[is_festival]' derivation='None' name='[none:is_festival:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[order_date]' derivation='None' name='[none:order_date:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Count' caption='Order Date' datatype='date' datatype-customized='true' name='[order_date]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.17oquoq0d9mupt1844s1818be3pb].[none:Calculation_4282993640768364554:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Single (1 order)&quot;</bucket>
+              <bucket>&quot;Multi (2 orders)&quot;</bucket>
+              <bucket>&quot;Multi (3 orders)&quot;</bucket>
+              <bucket>&quot;Multi (4+ orders)&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:city_type:nk]</column>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:is_festival:ok]</column>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:order_date:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.17oquoq0d9mupt1844s1818be3pb].[avg:Calculation_4282993640770781195:qk]</rows>
+        <cols>[federated.17oquoq0d9mupt1844s1818be3pb].[none:Calculation_4282993640768364554:nk]</cols>
+      </table>
+      <simple-id uuid='{C9C955CD-2D89-455A-81A9-83B0750E399A}' />
+    </worksheet>
+    <worksheet name='Overtime KPI'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='operations_summary_for_tableau+ (food_delivery)' name='federated.17oquoq0d9mupt1844s1818be3pb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.17oquoq0d9mupt1844s1818be3pb'>
+            <column caption='Overtime Rate' datatype='real' name='[Calculation_4282993640783917068]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [avg_delivery_time (rider_performance_analysis)] &gt; 45 THEN 1 ELSE 0 END) / COUNT([total_orders (rider_performance_analysis)]) * 100' />
+            </column>
+            <column-instance column='[low_rating_rate]' derivation='Avg' name='[avg:low_rating_rate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[severe_delay_rate]' derivation='Avg' name='[avg:severe_delay_rate:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Delivery Time (Rider Performance Analysis)' datatype='real' name='[avg_delivery_time (rider_performance_analysis)]' role='measure' type='quantitative' />
+            <column caption='City Type' datatype='string' name='[city_type]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column aggregation='Sum' caption='Is Festival' datatype='integer' name='[is_festival]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Regular Days' />
+                <alias key='1' value='Festival Days' />
+              </aliases>
+            </column>
+            <column caption='Low Rating Rate' datatype='real' name='[low_rating_rate]' role='measure' type='quantitative' />
+            <column-instance column='[city_type]' derivation='None' name='[none:city_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[is_festival]' derivation='None' name='[none:is_festival:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[order_date]' derivation='None' name='[none:order_date:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Count' caption='Order Date' datatype='date' datatype-customized='true' name='[order_date]' role='dimension' type='ordinal' />
+            <column caption='Severe Delay Rate' datatype='real' name='[severe_delay_rate]' role='measure' type='quantitative' />
+            <column caption='Total Orders (Rider Performance Analysis)' datatype='integer' name='[total_orders (rider_performance_analysis)]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_4282993640783917068]' derivation='User' name='[usr:Calculation_4282993640783917068:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:city_type:nk]</column>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:is_festival:ok]</column>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:order_date:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.17oquoq0d9mupt1844s1818be3pb].[usr:Calculation_4282993640783917068:qk]' value='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' />
+            <format attr='text-format' field='[federated.17oquoq0d9mupt1844s1818be3pb].[avg:severe_delay_rate:qk]' value='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' />
+            <format attr='text-format' field='[federated.17oquoq0d9mupt1844s1818be3pb].[avg:low_rating_rate:qk]' value='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' center='7.5' field='[federated.17oquoq0d9mupt1844s1818be3pb].[usr:Calculation_4282993640783917068:qk]' max='10.0' min='0.0' num-steps='3' palette='orange_gold_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.17oquoq0d9mupt1844s1818be3pb].[usr:Calculation_4282993640783917068:qk]' />
+              <text column='[federated.17oquoq0d9mupt1844s1818be3pb].[usr:Calculation_4282993640783917068:qk]' />
+              <text column='[federated.17oquoq0d9mupt1844s1818be3pb].[avg:severe_delay_rate:qk]' />
+              <text column='[federated.17oquoq0d9mupt1844s1818be3pb].[avg:low_rating_rate:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontalignment='0' fontcolor='#4e79a7' fontsize='12'><![CDATA[Overtime Rate:  <[federated.17oquoq0d9mupt1844s1818be3pb].[usr:Calculation_4282993640783917068:qk]>]]></run>
+                <run fontalignment='0'>Æ&#10;</run>
+                <run bold='true' fontalignment='0' fontcolor='#4e79a7' fontsize='12'>Severe Delay Rate:  </run>
+                <run bold='true' fontalignment='0' fontcolor='#4e79a7' fontsize='12'><![CDATA[<[federated.17oquoq0d9mupt1844s1818be3pb].[avg:severe_delay_rate:qk]>]]></run>
+                <run fontalignment='0'>Æ&#10;</run>
+                <run bold='true' fontalignment='0' fontcolor='#4e79a7' fontsize='12'>Low Rating Rate: </run>
+                <run bold='true' fontalignment='0' fontcolor='#4e79a7' fontsize='12'><![CDATA[<[federated.17oquoq0d9mupt1844s1818be3pb].[avg:low_rating_rate:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{672AD557-2D6A-41EA-8FEA-0542889F1DA8}' />
+    </worksheet>
+    <worksheet name='Overtime Trend'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='operations_summary_for_tableau+ (food_delivery)' name='federated.17oquoq0d9mupt1844s1818be3pb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.17oquoq0d9mupt1844s1818be3pb'>
+            <column caption='Overtime Rate' datatype='real' name='[Calculation_4282993640783917068]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [avg_delivery_time (rider_performance_analysis)] &gt; 45 THEN 1 ELSE 0 END) / COUNT([total_orders (rider_performance_analysis)]) * 100' />
+            </column>
+            <column caption='Avg Delivery Time (Rider Performance Analysis)' datatype='real' name='[avg_delivery_time (rider_performance_analysis)]' role='measure' type='quantitative' />
+            <column caption='City Type' datatype='string' name='[city_type]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column aggregation='Sum' caption='Is Festival' datatype='integer' name='[is_festival]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Regular Days' />
+                <alias key='1' value='Festival Days' />
+              </aliases>
+            </column>
+            <column-instance column='[city_type]' derivation='None' name='[none:city_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[is_festival]' derivation='None' name='[none:is_festival:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[order_date]' derivation='None' name='[none:order_date:qk]' pivot='key' type='quantitative' />
+            <column caption='Order Date (Rider Performance Analysis)' datatype='date' name='[order_date (rider_performance_analysis)]' role='dimension' type='ordinal' />
+            <column aggregation='Count' caption='Order Date' datatype='date' datatype-customized='true' name='[order_date]' role='dimension' type='ordinal' />
+            <column-instance column='[order_date (rider_performance_analysis)]' derivation='Day-Trunc' name='[tdy:order_date (rider_performance_analysis):qk]' pivot='key' type='quantitative' />
+            <column caption='Total Orders (Rider Performance Analysis)' datatype='integer' name='[total_orders (rider_performance_analysis)]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_4282993640783917068]' derivation='User' name='[usr:Calculation_4282993640783917068:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:city_type:nk]</column>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:is_festival:ok]</column>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:order_date:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.17oquoq0d9mupt1844s1818be3pb].[usr:Calculation_4282993640783917068:qk]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.17oquoq0d9mupt1844s1818be3pb].[usr:Calculation_4282993640783917068:qk]' value='n#,##0&quot;%&quot;;-#,##0&quot;%&quot;' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dashed' />
+            <format attr='stroke-color' id='refline0' value='#e15759' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <reference-line axis-column='[federated.17oquoq0d9mupt1844s1818be3pb].[usr:Calculation_4282993640783917068:qk]' enable-instant-analytics='true' formula='constant' id='refline0' label='10% Alert Threshold' label-type='custom' scope='per-pane' value='10.0' value-column='[federated.17oquoq0d9mupt1844s1818be3pb].[usr:Calculation_4282993640783917068:qk]' z-order='1' />
+          </pane>
+        </panes>
+        <rows>[federated.17oquoq0d9mupt1844s1818be3pb].[usr:Calculation_4282993640783917068:qk]</rows>
+        <cols>[federated.17oquoq0d9mupt1844s1818be3pb].[tdy:order_date (rider_performance_analysis):qk]</cols>
+      </table>
+      <simple-id uuid='{11A11619-2BCE-4F3F-A9E3-E5561A7C6D4E}' />
+    </worksheet>
+    <worksheet name='Problem Hotspot Map'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='operations_summary_for_tableau+ (food_delivery)' name='federated.17oquoq0d9mupt1844s1818be3pb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.17oquoq0d9mupt1844s1818be3pb'>
+            <column-instance column='[delivery_lat]' derivation='Avg' name='[avg:delivery_lat:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[delivery_lng]' derivation='Avg' name='[avg:delivery_lng:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_orders (rider_performance_analysis)]' derivation='Avg' name='[avg:total_orders (rider_performance_analysis):qk]' pivot='key' type='quantitative' />
+            <column caption='City Type' datatype='string' name='[city_type]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column aggregation='Avg' caption='Delivery Lat' datatype='real' name='[delivery_lat]' role='dimension' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Sum' caption='Delivery Lng' datatype='real' name='[delivery_lng]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' caption='Is Festival' datatype='integer' name='[is_festival]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Regular Days' />
+                <alias key='1' value='Festival Days' />
+              </aliases>
+            </column>
+            <column-instance column='[city_type]' derivation='None' name='[none:city_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[is_festival]' derivation='None' name='[none:is_festival:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[order_date]' derivation='None' name='[none:order_date:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Count' caption='Order Date' datatype='date' datatype-customized='true' name='[order_date]' role='dimension' type='ordinal' />
+            <column caption='Problem Score' datatype='integer' name='[problem_score]' role='measure' type='quantitative' />
+            <column-instance column='[problem_score]' derivation='Sum' name='[sum:problem_score:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Orders (Rider Performance Analysis)' datatype='integer' name='[total_orders (rider_performance_analysis)]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:city_type:nk]</column>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:is_festival:ok]</column>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:order_date:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.17oquoq0d9mupt1844s1818be3pb].[sum:problem_score:qk]' />
+              <size column='[federated.17oquoq0d9mupt1844s1818be3pb].[avg:total_orders (rider_performance_analysis):qk]' />
+              <geometry column='[federated.17oquoq0d9mupt1844s1818be3pb].[Geometry (generated)]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.17oquoq0d9mupt1844s1818be3pb].[avg:delivery_lat:qk]</rows>
+        <cols>[federated.17oquoq0d9mupt1844s1818be3pb].[avg:delivery_lng:qk]</cols>
+      </table>
+      <simple-id uuid='{10BB2C49-25B5-4755-B23C-95B0E1B66996}' />
+    </worksheet>
+    <worksheet name='Time Per Order'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='operations_summary_for_tableau+ (food_delivery)' name='federated.17oquoq0d9mupt1844s1818be3pb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.17oquoq0d9mupt1844s1818be3pb'>
+            <column caption='Orders Per Trip' datatype='string' name='[Calculation_4282993640768364554]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [avg_multi_delivery (rider_performance_analysis)] = 0 THEN &quot;Single (1 order)&quot;&#10;ELSEIF [avg_multi_delivery (rider_performance_analysis)] = 1 THEN &quot;Multi (2 orders)&quot;&#10;ELSEIF [avg_multi_delivery (rider_performance_analysis)] = 2 THEN &quot;Multi (3 orders)&quot;&#10;ELSE &quot;Multi (4+ orders)&quot;&#10;END' />
+            </column>
+            <column-instance column='[avg_delivery_time (rider_performance_analysis)]' derivation='Avg' name='[avg:avg_delivery_time (rider_performance_analysis):qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Delivery Time (Rider Performance Analysis)' datatype='real' name='[avg_delivery_time (rider_performance_analysis)]' role='measure' type='quantitative' />
+            <column caption='Avg Multi Delivery (Rider Performance Analysis)' datatype='real' name='[avg_multi_delivery (rider_performance_analysis)]' role='measure' type='quantitative' />
+            <column caption='City Type' datatype='string' name='[city_type]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column aggregation='Sum' caption='Is Festival' datatype='integer' name='[is_festival]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Regular Days' />
+                <alias key='1' value='Festival Days' />
+              </aliases>
+            </column>
+            <column-instance column='[Calculation_4282993640768364554]' derivation='None' name='[none:Calculation_4282993640768364554:nk]' pivot='key' type='nominal' />
+            <column-instance column='[city_type]' derivation='None' name='[none:city_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[is_festival]' derivation='None' name='[none:is_festival:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[order_date]' derivation='None' name='[none:order_date:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Count' caption='Order Date' datatype='date' datatype-customized='true' name='[order_date]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.17oquoq0d9mupt1844s1818be3pb].[none:Calculation_4282993640768364554:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Single (1 order)&quot;</bucket>
+              <bucket>&quot;Multi (2 orders)&quot;</bucket>
+              <bucket>&quot;Multi (3 orders)&quot;</bucket>
+              <bucket>&quot;Multi (4+ orders)&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:city_type:nk]</column>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:is_festival:ok]</column>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:order_date:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.17oquoq0d9mupt1844s1818be3pb].[avg:avg_delivery_time (rider_performance_analysis):qk]' scope='rows' value='Avg Delivery Time in Mins' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.17oquoq0d9mupt1844s1818be3pb].[none:Calculation_4282993640768364554:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.17oquoq0d9mupt1844s1818be3pb].[avg:avg_delivery_time (rider_performance_analysis):qk]' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-pane' value-column='[federated.17oquoq0d9mupt1844s1818be3pb].[avg:avg_delivery_time (rider_performance_analysis):qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='150' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.17oquoq0d9mupt1844s1818be3pb].[avg:avg_delivery_time (rider_performance_analysis):qk]</rows>
+        <cols>[federated.17oquoq0d9mupt1844s1818be3pb].[none:Calculation_4282993640768364554:nk]</cols>
+      </table>
+      <simple-id uuid='{34D2A359-6E4E-4D68-8B58-C3F5AE421A12}' />
+    </worksheet>
+    <worksheet name='Traffic Impact'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='operations_summary_for_tableau+ (food_delivery)' name='federated.17oquoq0d9mupt1844s1818be3pb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.17oquoq0d9mupt1844s1818be3pb'>
+            <column-instance column='[avg_delivery_time (external_factors_analysis)]' derivation='Avg' name='[avg:avg_delivery_time (external_factors_analysis):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[on_time_rate (external_factors_analysis)]' derivation='Avg' name='[avg:on_time_rate (external_factors_analysis):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[orders (external_factors_analysis)]' derivation='Avg' name='[avg:orders (external_factors_analysis):qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Delivery Time (External Factors Analysis)' datatype='real' name='[avg_delivery_time (external_factors_analysis)]' role='measure' type='quantitative' />
+            <column caption='City Type' datatype='string' name='[city_type]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column aggregation='Sum' caption='Is Festival' datatype='integer' name='[is_festival]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Regular Days' />
+                <alias key='1' value='Festival Days' />
+              </aliases>
+            </column>
+            <column-instance column='[city_type]' derivation='None' name='[none:city_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[is_festival]' derivation='None' name='[none:is_festival:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[order_date]' derivation='None' name='[none:order_date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[traffic_density (external_factors_analysis)]' derivation='None' name='[none:traffic_density (external_factors_analysis):nk]' pivot='key' type='nominal' />
+            <column caption='On Time Rate (External Factors Analysis)' datatype='real' name='[on_time_rate (external_factors_analysis)]' role='measure' type='quantitative' />
+            <column aggregation='Count' caption='Order Date' datatype='date' datatype-customized='true' name='[order_date]' role='dimension' type='ordinal' />
+            <column caption='Orders (External Factors Analysis)' datatype='integer' name='[orders (external_factors_analysis)]' role='measure' type='quantitative' />
+            <column caption='Traffic Density (External Factors Analysis)' datatype='string' name='[traffic_density (external_factors_analysis)]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.17oquoq0d9mupt1844s1818be3pb].[none:traffic_density (external_factors_analysis):nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Low&quot;</bucket>
+              <bucket>&quot;Medium&quot;</bucket>
+              <bucket>&quot;High&quot;</bucket>
+              <bucket>&quot;Heavy&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:city_type:nk]</column>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:is_festival:ok]</column>
+            <column>[federated.17oquoq0d9mupt1844s1818be3pb].[none:order_date:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' domain-expand='false' field='[federated.17oquoq0d9mupt1844s1818be3pb].[avg:avg_delivery_time (external_factors_analysis):qk]' field-type='quantitative' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.17oquoq0d9mupt1844s1818be3pb].[avg:avg_delivery_time (external_factors_analysis):qk]' scope='rows' value='Avg. Avg Delivery Time in mins' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.17oquoq0d9mupt1844s1818be3pb].[avg:on_time_rate (external_factors_analysis):qk]' palette='red_green_diverging_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.17oquoq0d9mupt1844s1818be3pb].[avg:on_time_rate (external_factors_analysis):qk]' />
+              <size column='[federated.17oquoq0d9mupt1844s1818be3pb].[avg:orders (external_factors_analysis):qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='139' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.17oquoq0d9mupt1844s1818be3pb].[avg:avg_delivery_time (external_factors_analysis):qk]</rows>
+        <cols>[federated.17oquoq0d9mupt1844s1818be3pb].[none:traffic_density (external_factors_analysis):nk]</cols>
+      </table>
+      <simple-id uuid='{5567EC13-3C5E-43BF-9CA2-904E2E4418A2}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='KPI Overview'>
+      <cards>
+        <edge name='left'>
+          <strip size='288'>
+            <card size='31' type='pages' />
+            <card size='70' type='filters' />
+            <card size='262' type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='241'>
+            <card param='[federated.17oquoq0d9mupt1844s1818be3pb].[none:order_date:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.17oquoq0d9mupt1844s1818be3pb].[none:city_type:nk]' type='filter' />
+            <card param='[federated.17oquoq0d9mupt1844s1818be3pb].[none:is_festival:ok]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='4' />
+      </viewpoint>
+      <simple-id uuid='{576352A6-95C0-4F92-AF17-9E7507447C8C}' />
+    </window>
+    <window class='worksheet' name='Traffic Impact'>
+      <cards>
+        <edge name='left'>
+          <strip size='300'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.17oquoq0d9mupt1844s1818be3pb].[avg:orders (external_factors_analysis):qk]' type='size' />
+            <card pane-specification-id='0' param='[federated.17oquoq0d9mupt1844s1818be3pb].[avg:on_time_rate (external_factors_analysis):qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7BD1CB58-55D7-484B-BD76-1407719D9B4F}' />
+    </window>
+    <window class='worksheet' name='Daily Order Trend by Day Type'>
+      <cards>
+        <edge name='left'>
+          <strip size='231'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.17oquoq0d9mupt1844s1818be3pb].[none:order_date:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.17oquoq0d9mupt1844s1818be3pb].[none:Calculation_4282993640691884035:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DA518DC8-4B8D-45D5-A93A-F1AFD9B2255E}' />
+    </window>
+    <window class='worksheet' name='Daily Order Trend by City Type'>
+      <cards>
+        <edge name='left'>
+          <strip size='218'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.17oquoq0d9mupt1844s1818be3pb].[none:city_type:nk]' type='filter' />
+            <card param='[federated.17oquoq0d9mupt1844s1818be3pb].[none:order_date:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.17oquoq0d9mupt1844s1818be3pb].[none:city_type (city_performance_analysis):nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{28DADF76-FC5D-4950-866F-0AC14F99FBC2}' />
+    </window>
+    <window class='worksheet' name='On-time Rate'>
+      <cards>
+        <edge name='left'>
+          <strip size='210'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.17oquoq0d9mupt1844s1818be3pb].[none:city_type:nk]' type='filter' />
+            <card param='[federated.17oquoq0d9mupt1844s1818be3pb].[none:order_date:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.17oquoq0d9mupt1844s1818be3pb].[none:city_type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1D34AEB6-7DE3-4621-8B24-B4246016D909}' />
+    </window>
+    <window class='worksheet' name='Time Per Order'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.17oquoq0d9mupt1844s1818be3pb].[none:Calculation_4282993640768364554:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D608CF71-F5BC-4245-AB85-76893674BD00}' />
+    </window>
+    <window class='worksheet' name='Orders Per Hour'>
+      <cards>
+        <edge name='left'>
+          <strip size='239'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FF4C5C5E-1FB1-441E-B7CD-EBBF3A926C0C}' />
+    </window>
+    <window class='worksheet' name='Overtime KPI'>
+      <cards>
+        <edge name='left'>
+          <strip size='248'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='297'>
+            <card pane-specification-id='0' param='[federated.17oquoq0d9mupt1844s1818be3pb].[usr:Calculation_4282993640783917068:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C7B85E7A-05BD-4841-84CC-928C426CCCB0}' />
+    </window>
+    <window class='worksheet' name='Overtime Trend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D8C1E1FF-9592-4671-8DB7-82D23DE2526F}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Problem Hotspot Map' tab-color='#f66273'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.17oquoq0d9mupt1844s1818be3pb].[sum:problem_score:qk]' type='color' />
+            <card pane-specification-id='0' param='[federated.17oquoq0d9mupt1844s1818be3pb].[avg:total_orders (rider_performance_analysis):qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C1405143-C5CE-45A5-AE2F-726EC6807A59}' />
+    </window>
+  </windows>
+</workbook>
